@@ -1,0 +1,1 @@
+$(document).ready(function(){var s=$(".hamburger"),e=$(".overlay"),a=!1;s.click(function(){!0===a?(e.hide(),s.removeClass("is-open"),s.addClass("is-closed"),a=!1):(e.show(),s.removeClass("is-closed"),s.addClass("is-open"),a=!0)}),$('[data-toggle="offcanvas"]').click(function(){$("#wrapper").toggleClass("toggled")})});

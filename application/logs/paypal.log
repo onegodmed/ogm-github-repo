@@ -1,0 +1,58 @@
+[13-03-2020 08:06:02] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[13-03-2020 08:06:04] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[13-03-2020 08:13:26] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[13-03-2020 08:13:28] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[13-03-2020 09:38:32] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[13-03-2020 09:38:35] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[13-03-2020 09:49:46] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[13-03-2020 09:49:49] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[13-03-2020 09:53:24] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[13-03-2020 09:53:26] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[13-03-2020 10:00:43] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[13-03-2020 10:00:45] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[13-03-2020 10:17:22] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[13-03-2020 10:17:23] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 400
+[13-03-2020 10:17:23] PayPal\Core\PayPalHttpConnection : ERROR: Got Http response code 400 when accessing https://api.sandbox.paypal.com/v1/payments/payment. {"name":"VALIDATION_ERROR","details":[{"field":"transactions[0]","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"},{"field":"transactions[0].amount","issue":"Transaction amount details (subtotal, tax, shipping) must add up to specified amount total"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/docs/api/payments/#errors","debug_id":"b1608eb78a34b"}
+[13-03-2020 10:17:46] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[13-03-2020 10:17:48] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 400
+[13-03-2020 10:17:48] PayPal\Core\PayPalHttpConnection : ERROR: Got Http response code 400 when accessing https://api.sandbox.paypal.com/v1/payments/payment. {"name":"VALIDATION_ERROR","details":[{"field":"transactions[0].amount","issue":"Transaction amount details (subtotal, tax, shipping) must add up to specified amount total"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/docs/api/payments/#errors","debug_id":"587dd7ab403e6"}
+[13-03-2020 10:18:09] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[13-03-2020 10:18:11] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[13-03-2020 10:44:04] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[13-03-2020 10:44:06] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 400
+[13-03-2020 10:44:06] PayPal\Core\PayPalHttpConnection : ERROR: Got Http response code 400 when accessing https://api.sandbox.paypal.com/v1/payments/payment. {"name":"VALIDATION_ERROR","details":[{"field":"transactions[0].amount","issue":"Transaction amount details (subtotal, tax, shipping) must add up to specified amount total"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/docs/api/payments/#errors","debug_id":"12bcb72097811"}
+[13-03-2020 10:44:20] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[13-03-2020 10:44:22] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 400
+[13-03-2020 10:44:22] PayPal\Core\PayPalHttpConnection : ERROR: Got Http response code 400 when accessing https://api.sandbox.paypal.com/v1/payments/payment. {"name":"VALIDATION_ERROR","details":[{"field":"transactions[0].amount","issue":"Amount cannot be zero"},{"field":"transactions[0].item_list.items[0].price","issue":"Required field missing"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/docs/api/payments/#errors","debug_id":"70a9c039286d3"}
+[13-03-2020 10:44:30] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[13-03-2020 10:44:32] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[13-03-2020 10:57:39] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[13-03-2020 10:57:41] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 400
+[13-03-2020 10:57:41] PayPal\Core\PayPalHttpConnection : ERROR: Got Http response code 400 when accessing https://api.sandbox.paypal.com/v1/payments/payment. {"name":"VALIDATION_ERROR","details":[{"field":"transactions[0].amount","issue":"Transaction amount details (subtotal, tax, shipping) must add up to specified amount total"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/docs/api/payments/#errors","debug_id":"e7e38084cbde2"}
+[13-03-2020 10:57:55] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[13-03-2020 10:57:57] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 400
+[13-03-2020 10:57:57] PayPal\Core\PayPalHttpConnection : ERROR: Got Http response code 400 when accessing https://api.sandbox.paypal.com/v1/payments/payment. {"name":"VALIDATION_ERROR","details":[{"field":"transactions[0].amount","issue":"Transaction amount details (subtotal, tax, shipping) must add up to specified amount total"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/docs/api/payments/#errors","debug_id":"f9f4e163c3925"}
+[13-03-2020 10:59:47] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[13-03-2020 10:59:48] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 400
+[13-03-2020 10:59:48] PayPal\Core\PayPalHttpConnection : ERROR: Got Http response code 400 when accessing https://api.sandbox.paypal.com/v1/payments/payment. {"name":"VALIDATION_ERROR","details":[{"field":"transactions[0]","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/docs/api/payments/#errors","debug_id":"661188625b6f5"}
+[13-03-2020 11:00:11] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[13-03-2020 11:00:14] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[14-03-2020 15:12:47] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[14-03-2020 15:12:49] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 200
+[14-03-2020 15:12:49] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[14-03-2020 15:12:50] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 400
+[14-03-2020 15:12:50] PayPal\Core\PayPalHttpConnection : ERROR: Got Http response code 400 when accessing https://api.sandbox.paypal.com/v1/payments/payment. {"name":"VALIDATION_ERROR","message":"Invalid request - see details","debug_id":"fd37fd0d6a656","information_link":"https://developer.paypal.com/docs/api/payments/#errors","details":[{"field":"transactions.amount.details","location":"body","issue":"Cannot construct instance of `com.paypal.platform.payments.model.rest.common.AmountDetails`, problem: INVALID_CURRENCY_AMOUNT_FORMAT"}]}
+[14-03-2020 15:14:02] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[14-03-2020 15:14:03] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 400
+[14-03-2020 15:14:03] PayPal\Core\PayPalHttpConnection : ERROR: Got Http response code 400 when accessing https://api.sandbox.paypal.com/v1/payments/payment. {"name":"VALIDATION_ERROR","details":[{"field":"transactions[0].item_list.items[0].price","issue":"Required field missing"},{"field":"transactions[0].amount","issue":"Amount cannot be zero"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/docs/api/payments/#errors","debug_id":"9d67b448ad673"}
+[14-03-2020 15:15:23] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[14-03-2020 15:15:25] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 400
+[14-03-2020 15:15:25] PayPal\Core\PayPalHttpConnection : ERROR: Got Http response code 400 when accessing https://api.sandbox.paypal.com/v1/payments/payment. {"name":"VALIDATION_ERROR","details":[{"field":"transactions[0]","issue":"Item amount must add up to specified amount subtotal (or total if amount details not specified)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/docs/api/payments/#errors","debug_id":"46a6c1052e5a5"}
+[14-03-2020 15:18:06] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[14-03-2020 15:18:08] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 201
+[14-03-2020 15:24:45] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[14-03-2020 15:24:47] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 400
+[14-03-2020 15:24:47] PayPal\Core\PayPalHttpConnection : ERROR: Got Http response code 400 when accessing https://api.sandbox.paypal.com/v1/payments/payment. Unrecognized field &quot;price&quot; (class com.paypal.platform.payments.model.rest.common.AmountDetails), not marked as ignorable
+[14-03-2020 15:29:17] PayPal\Core\PayPalHttpConnection : INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[14-03-2020 15:29:19] PayPal\Core\PayPalHttpConnection : INFO: Response Status 	: 400
+[14-03-2020 15:29:19] PayPal\Core\PayPalHttpConnection : ERROR: Got Http response code 400 when accessing https://api.sandbox.paypal.com/v1/payments/payment. {"name":"VALIDATION_ERROR","message":"Invalid request - see details","debug_id":"bf7583219f581","information_link":"https://developer.paypal.com/docs/api/payments/#errors","details":[{"field":"transactions.amount","location":"body","issue":"Cannot construct instance of `com.paypal.platform.payments.model.rest.common.Amount`, problem: INVALID_CURRENCY_AMOUNT_FORMAT"}]}

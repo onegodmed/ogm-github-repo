@@ -1,0 +1,2007 @@
+@media(max-width:640px) {
+	.login-form {
+		padding-top: 100px;
+		width: 100%;
+		display: inline-block;
+	}
+	p.text-white1 {
+		color: #fff;
+		line-height: 26px;
+		text-align: justify;
+		z-index: 9999;
+	}
+	.image-container.set-full-height {
+		height: auto!important;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-bottom: 100px;
+	}
+	.wizard-container {
+		width: 100%!important;
+	}
+	body {
+		overflow-x: hidden
+	}
+	.GrayColor_light_a {
+		font-size: 14px
+	}
+	.home_blog .ast_blog_img img {
+		height: 180px;
+		width: 100%;
+		object-fit: cover
+	}
+	.ast_contact_details ul li {
+		margin: 6px 0 0!important;
+		padding: 2px 8px;
+		font-size: 14px
+	}
+	.ast_autho_wrapper li {
+		padding-left: 10px
+	}
+	.ast_autho_wrapper li i {
+		display: none
+	}
+	.ast_slider_wrapper .ast_testimonials_slider_box p {
+		font-size: 20px;
+		font-weight: 900
+	}
+	nav.foo_social {
+		display: none
+	}
+	.ast_testimonials_slider_box {
+		text-align: center
+	}
+	.slick-list.draggable {
+		position: relative;
+		z-index: 0
+	}
+	.ast_top_header .ast_autho_wrapper ul li,
+	.ast_top_header .ast_contact_details {
+		padding-top: 0;
+		padding-bottom: 8px
+	}
+	.nav-tabs>li {
+		margin-bottom: 10px
+	}
+	.ast_download_wrapper.ast_toppadder70.ast_bottompadder70 {
+		display: none
+	}
+	.ast_top_header {
+		z-index: 999
+	}
+	.ast_pagetitle {
+		padding: 200px 0 20px;
+		background-size: cover!important
+	}
+	button.ast_menu_btn i {
+		margin: 0
+	}
+	.become_partner .ast_journal_box_wrapper form {
+		margin: 0 10px 30px
+	}
+	body {
+		position: relative;
+		overflow-x: hidden
+	}
+	body,
+	html {
+		height: 100%
+	}
+	.nav .open>a {
+		background-color: transparent
+	}
+	.nav .open>a:hover {
+		background-color: transparent
+	}
+	.nav .open>a:focus {
+		background-color: transparent
+	}
+	#wrapper {
+		padding-left: 0;
+		-webkit-transition: all .5s ease;
+		-moz-transition: all .5s ease;
+		-ms-transition: all .5s ease;
+		-o-transition: all .5s ease;
+		transition: all .5s ease
+	}
+	#wrapper.toggled {
+		padding-left: 220px
+	}
+	#wrapper.toggled #sidebar-wrapper {
+		width: 100%
+	}
+	#wrapper.toggled #page-content-wrapper {
+		margin-right: -220px;
+		position: absolute
+	}
+	#sidebar-wrapper {
+		background: #1a1a1a;
+		height: 100%;
+		left: 220px;
+		margin-left: -220px;
+		overflow-x: hidden;
+		overflow-y: auto;
+		-moz-transition: all .5s ease;
+		-o-transition: all .5s ease;
+		-webkit-transition: all .5s ease;
+		-ms-transition: all .5s ease;
+		transition: all .5s ease;
+		width: 0;
+		z-index: 1000
+	}
+	#sidebar-wrapper::-webkit-scrollbar {
+		display: none
+	}
+	.sidebar-nav {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		top: 0;
+		width: 100%
+	}
+	.sidebar-nav li {
+		display: inline-block;
+		line-height: 20px;
+		position: relative;
+		width: 100%
+	}
+	.sidebar-nav li:before {
+		background-color: #1c1c1c;
+		content: '';
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		-webkit-transition: width .2s ease-in;
+		-moz-transition: width .2s ease-in;
+		-ms-transition: width .2s ease-in;
+		-o-transition: width .2s ease-in;
+		transition: width .2s ease-in;
+		width: 3px;
+		z-index: -1
+	}
+	.sidebar-nav li:before {
+		background-color: #fb8726
+	}
+	.sidebar-nav li:hover:before {
+		-webkit-transition: width .2s ease-in;
+		-moz-transition: width .2s ease-in;
+		-ms-transition: width .2s ease-in;
+		-o-transition: width .2s ease-in;
+		transition: width .2s ease-in;
+		width: 100%
+	}
+	.sidebar-nav li a {
+		color: #ddd;
+		display: block;
+		padding: 10px 15px 10px 30px;
+		text-decoration: none
+	}
+	.sidebar-nav li.open:hover before {
+		-webkit-transition: width .2s ease-in;
+		-moz-transition: width .2s ease-in;
+		-ms-transition: width .2s ease-in;
+		-o-transition: width .2s ease-in;
+		transition: width .2s ease-in;
+		width: 100%
+	}
+	.sidebar-nav .dropdown-menu {
+		background-color: #222;
+		-ms-border-radius: 0;
+		border-radius: 0;
+		border: none;
+		-webkit-box-shadow: none;
+		-ms-box-shadow: none;
+		box-shadow: none;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		width: 100%
+	}
+	.sidebar-nav li a:active,
+	.sidebar-nav li a:focus,
+	.sidebar-nav li a:hover,
+	.sidebar-nav li.open a:active,
+	.sidebar-nav li.open a:focus,
+	.sidebar-nav li.open a:hover {
+		background-color: transparent;
+		color: #fff;
+		text-decoration: none
+	}
+	.sidebar-nav>.sidebar-brand {
+		font-size: 20px;
+		height: 65px;
+		line-height: 44px
+	}
+	.hamburger {
+		background: 0 0;
+		border: none;
+		display: block;
+		height: 27px;
+		margin-left: 15px;
+		position: fixed;
+		top: 18px;
+		width: 25px;
+		z-index: 99999999;
+		right: 20px
+	}
+	.hamburger:hover {
+		outline: 0
+	}
+	.hamburger:focus {
+		outline: 0
+	}
+	.hamburger:active {
+		outline: 0
+	}
+	.hamburger.is-closed:before {
+		-webkit-transform: translate3d(0, 0, 0);
+		-moz-transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		-o-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+		-webkit-transition: all .35s ease-in-out;
+		-moz-transition: all .35s ease-in-out;
+		-ms-transition: all .35s ease-in-out;
+		-o-transition: all .35s ease-in-out;
+		transition: all .35s ease-in-out;
+		content: '';
+		display: block;
+		font-size: 14px;
+		line-height: 32px;
+		-ms-opacity: 0;
+		opacity: 0;
+		text-align: center;
+		width: 100px
+	}
+	.hamburger.is-closed:hover before {
+		-webkit-transform: translate3d(-100px, 0, 0);
+		-moz-transform: translate3d(-100px, 0, 0);
+		-ms-transform: translate3d(-100px, 0, 0);
+		-o-transform: translate3d(-100px, 0, 0);
+		transform: translate3d(-100px, 0, 0);
+		-webkit-transition: all .35s ease-in-out;
+		-moz-transition: all .35s ease-in-out;
+		-ms-transition: all .35s ease-in-out;
+		-o-transition: all .35s ease-in-out;
+		transition: all .35s ease-in-out;
+		display: block;
+		-ms-opacity: 1;
+		opacity: 1
+	}
+	.hamburger.is-closed:hover .hamb-top {
+		-webkit-transition: all .35s ease-in-out;
+		-moz-transition: all .35s ease-in-out;
+		-ms-transition: all .35s ease-in-out;
+		-o-transition: all .35s ease-in-out;
+		transition: all .35s ease-in-out;
+	}
+	.hamburger.is-closed:hover .hamb-bottom {
+		-webkit-transition: all .35s ease-in-out;
+		-moz-transition: all .35s ease-in-out;
+		-ms-transition: all .35s ease-in-out;
+		-o-transition: all .35s ease-in-out;
+		transition: all .35s ease-in-out;
+	}
+	.hamburger.is-closed .hamb-top {
+		-webkit-transition: all .35s ease-in-out;
+		-moz-transition: all .35s ease-in-out;
+		-ms-transition: all .35s ease-in-out;
+		-o-transition: all .35s ease-in-out;
+		transition: all .35s ease-in-out;
+		top: 5px
+	}
+	.hamburger.is-closed .hamb-middle {
+		margin-top: -2px;
+		top: 50%
+	}
+	.hamburger.is-closed .hamb-bottom {
+		-webkit-transition: all .35s ease-in-out;
+		-moz-transition: all .35s ease-in-out;
+		-ms-transition: all .35s ease-in-out;
+		-o-transition: all .35s ease-in-out;
+		transition: all .35s ease-in-out;
+		bottom: 5px
+	}
+	.hamburger.is-closed .hamb-bottom,
+	.hamburger.is-closed .hamb-middle,
+	.hamburger.is-closed .hamb-top,
+	.hamburger.is-open .hamb-bottom,
+	.hamburger.is-open .hamb-middle,
+	.hamburger.is-open .hamb-top {
+		height: 3px;
+		left: 5px;
+		position: absolute;
+		width: 71%;
+	}
+	.hamburger.is-open .hamb-top {
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		transform: rotate(45deg);
+		-webkit-transition: -webkit-transform .2s cubic-bezier(.73, 1, .28, .08);
+		-moz-transition: -moz-transform .2s cubic-bezier(.73, 1, .28, .08);
+		-ms-transition: -ms-transform .2s cubic-bezier(.73, 1, .28, .08);
+		-o-transition: -o-transform .2s cubic-bezier(.73, 1, .28, .08);
+		transition: transform .2s cubic-bezier(.73, 1, .28, .08);
+		margin-top: -2px;
+		top: 50%
+	}
+	.hamburger.is-open .hamb-middle {
+		display: none
+	}
+	.hamburger.is-open .hamb-bottom {
+		-webkit-transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		-o-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+		-webkit-transition: -webkit-transform .2s cubic-bezier(.73, 1, .28, .08);
+		-moz-transition: -moz-transform .2s cubic-bezier(.73, 1, .28, .08);
+		-ms-transition: -ms-transform .2s cubic-bezier(.73, 1, .28, .08);
+		-o-transition: -o-transform .2s cubic-bezier(.73, 1, .28, .08);
+		transition: transform .2s cubic-bezier(.73, 1, .28, .08);
+		margin-top: -2px;
+		top: 50%
+	}
+	.hamburger.is-open:before {
+		-webkit-transform: translate3d(0, 0, 0);
+		-moz-transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		-o-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+		-webkit-transition: all .35s ease-in-out;
+		-moz-transition: all .35s ease-in-out;
+		-ms-transition: all .35s ease-in-out;
+		-o-transition: all .35s ease-in-out;
+		transition: all .35s ease-in-out;
+		content: '';
+		display: block;
+		font-size: 14px;
+		line-height: 32px;
+		-ms-opacity: 0;
+		opacity: 0;
+		text-align: center;
+		width: 100px
+	}
+	.hamburger.is-open:hover before {
+		-webkit-transform: translate3d(-100px, 0, 0);
+		-moz-transform: translate3d(-100px, 0, 0);
+		-ms-transform: translate3d(-100px, 0, 0);
+		-o-transform: translate3d(-100px, 0, 0);
+		transform: translate3d(-100px, 0, 0);
+		-webkit-transition: all .35s ease-in-out;
+		-moz-transition: all .35s ease-in-out;
+		-ms-transition: all .35s ease-in-out;
+		-o-transition: all .35s ease-in-out;
+		transition: all .35s ease-in-out;
+		display: block;
+		-ms-opacity: 1;
+		opacity: 1
+	}
+	.overlay {
+		position: fixed;
+		display: none;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #000;
+		background-color: rgba(0, 0, 0, .3);
+		z-index: 1
+	}
+	.hamb-bottom,
+	.hamb-middle,
+	.hamb-top {
+		background-color: #fff
+	}
+	.ast_autho_wrapper {
+		display: none
+	}
+	.ast_header_bottom {
+		margin-top: 40px
+	}
+	button.ast_menu_btn {
+		display: none
+	}
+	.detail_discription a.a.available {
+		margin-top: 0
+	}
+	.ast_blog_box {
+		min-height: 100%
+	}
+}
+
+@media(min-width:700px) {
+	div#wrapper {
+		display: none
+	}
+}
+
+.detail_discription a.a.available {
+	margin: 0
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+	.flowchart .GrayColor_light_a {
+		white-space: inherit;
+	}
+	.day-wrap {
+		flex-wrap: inherit;
+	}
+	.flowchart:before {
+		/* left: 50px; */
+		top: 50px;
+	}
+	.wallet-charge {
+		max-width: 100%;
+		width: 100%;
+	}
+	.wallet-charge button.btn {
+		width: 100%;
+		min-width: 118px;
+		min-height: 38px;
+		text-align: left;
+		padding-left: 6px;
+	}
+	.flowchart+.filtertype .action {
+		margin: 0 5px;
+	}
+	.flowchart+.filtertype .panel.panel_heading {
+		width: 130px;
+		font-size: 10px;
+	}
+	.filtertype a.panel-title [role="button"] {
+		font-size: 12px;
+	}
+	body .astrologer_box.main_box {
+		height:auto;
+	}
+}
+
+
+/*responsive layout*/
+
+@media (min-width: 1601px) and (max-width: 1680px) {}
+
+@media (min-width: 1441px) and (max-width: 1600px) {}
+
+@media (min-width: 1367px) and (max-width: 1440px) {}
+
+@media (min-width: 1281px) and (max-width: 1366px) {}
+
+@media (min-width: 1024px) and (max-width: 1280px) {}
+
+@media (min-width: 768px) and (max-width: 1023px) {}
+
+.mb_shw_flt{display:none;}
+/*mobile vertical layout*/
+
+@media only screen and (max-width: 767px) {
+	.mb_shw_flt {font-size:16px; font-weight:600; padding:0 15px; color:#fa8819; letter-spacing:0.5px; display:block !important;}
+	.none_mb_pg {display:none !important;}
+	.followingpage .online-wrapper {
+		position: absolute;
+		bottom: 0;
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		left: 0;
+	}
+	.myastrofollowing .callbtn {
+		position: absolute!important;
+		width: 100%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: auto;
+		padding: 0 3px;
+		align-items: flex-start!important;
+	}
+	.followingpage .online-wrapper .astroModalPopup,
+	.myastrofollowing .callbtn .wrppr {
+		width: auto!important;
+		padding-left: 3px!important;
+	}
+	
+	.followingpage  .wrppr {
+		position: static;
+	}
+	.myastrofollowing .callbtn .wrppr {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		bottom: 0px;
+		padding-left: 3px;
+		padding-bottom: 0!important;
+		padding-right: 0!important;
+	}
+	.ast_logo {
+		padding: 15px 0;
+	}
+	.ast_logo a img {
+		width: 150px !important;
+	}
+	.ast_banner_text {
+		padding: 20px!important;
+	}
+	.ast_banner_text {
+		overflow: initial !important;
+	}
+	.row.exper_1.asktoastro_body {
+		display: block!important;
+		margin-bottom: 15px;
+	}
+	.flowchart .GrayColor_light_a {
+		margin-top: 0;
+	}
+	.flowchart .sprite-consult_wallet_white~div span.GrayColor_light_a {
+		margin: 0;
+	}
+	.flowchart:before {
+		top: 47px;
+		left: 62px;
+	}
+	/* ==============Filter css ==========*/
+	.filtertype .row.d-flex {
+		flex-wrap: wrap;
+		justify-content: inherit;
+	}
+	.flowchart+.filtertype .action {
+		width: 100%;
+		max-width: 100%;
+		margin: 10px 0;
+	}
+	.flowchart+.filtertype .action button {
+		width: 100%;
+		text-align: left;
+		padding-left: 10px;
+		font-size: 16px;
+		font-weight: 600;
+	}
+	.flowchart+.filtertype .panel.panel_heading {
+		width: 100%;
+	}
+	.wallet-charge img {
+		max-width: 11%;
+		margin-left: 59%;
+	}
+	.astroheading {
+		padding-top: 30px;
+	}
+	/*=============== Tiles ask to asrto css================ */
+	body .sicn {
+		padding: 11px;
+	}
+	.tiles .top30 {
+		margin-top: 0;
+	}
+	.tiles .talkBox {
+		padding: 0;
+	}
+	body .discount-area {
+		top: 0;
+	}
+	body .astroheading {
+		padding-top: 17px;
+	}
+	body .astroheading h3 {
+		font-size: 1.6rem!important;
+		margin-bottom: 0;
+	}
+	.astro-image img {
+		max-width: 100%;
+		margin-bottom: 20px;
+	}
+	/* Profile page responsive */
+	body .ast_blog_box.about_vender {
+		margin-bottom: 0;
+	}
+	body .ratinghere {
+		max-width: 90%;
+	}
+	body .ratinghere .col-lg-12.d-flex {
+		flex-direction: column;
+		padding: 0;
+	}
+	body .starhere {
+		width: 100%;
+	}
+	body .bar {
+		width: 100%;
+	}
+	body .side {
+		width: 6%;
+		margin-top: 4px;
+	}
+	body .middle {
+		width: 90%;
+	}
+	.checkcontainer {
+		font-size: 12px;
+		margin-right: 5px;
+	}
+	.ast_blog_comment {
+		display: flex;
+		align-items: center;
+	}
+	.ast_blog_comment .ast_comment_image {
+		width: 60px;
+	}
+	.ast_blog_comment .ast_comment_image p {
+		text-align: left;
+		margin: 0;
+		width: auto;
+	}
+	.ast_blog_comment .ast_comment_text {
+		text-align: left;
+		margin-top: 0;
+	}
+	.commenthere {
+		padding: 20px 0;
+	}
+	.ast_blog_messages textarea {
+		padding: 3px 15px;
+	}
+	.message-type .ast_blog_messages .follow input {
+		margin: 0;
+	}
+	.day-wrap {
+		flex-wrap: inherit;
+	}
+	body .onlineastro {
+		padding-right: 15px;
+	}
+	.askastro .col-sm-6.col-md-4 {
+		padding: 0;
+	}
+	body ul.as_profile_text_ul {
+		width: 100%;
+	}
+	.askastro .as_profile_img {
+		margin-right: 5px;
+	}
+	.askastro .discount-area {
+		top: 15px;
+		right: 0;
+	}
+	body .callbtn {
+		position: static!important;
+		width: 100%;
+	}
+	.flowchart .glowing_icon {
+		width: 50px;
+		height: 50px;
+	}
+	.flowchart .sprite-consult_wallet_white {
+		width: 50px;
+		height: 59px;
+	}
+	.flowchart .desk_box:first-child span.GrayColor_light_a {
+		margin-top: 2px;
+		display: inline-block;
+	}
+	.askastro .discount-area {
+		top: -78px;
+		right: -33px;
+	}
+	.notonline .phone-icon {
+		right: 0;
+	}
+	.askastro .discount_price {
+		margin-right: 0;
+		line-height: 1.2em;
+	}
+	body .astrologer_box.main_box {
+		padding-left: 51px;
+		min-height: 265px;
+		position: relative;
+	}
+	body .astro-info .btn-style1 button {
+		margin: 0;
+	}
+	body .astro-info .follow.btn-style1 {
+		position: absolute;
+		left: 15px;
+		top: 55px;
+		margin: 15px 0;
+	}
+	.askastro .as_profile_text {
+		padding-top: 10px!important;
+	}
+	body .as_profile_text_ul li {
+		display: flex;
+		margin-bottom: 5px !important;
+		margin-left: 12px;
+		margin-top: 5px;
+	}
+	body .as_profile_text_ul li span {
+    margin-left: 1px;
+    }
+	.tiles div#dummyDataForCrawler {
+		padding: 0 5px;
+	}
+	.askastro .as_profile_text .callbtn {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-left: 0;
+	}
+	.askastro .callbtn .follow.btn-style1 {
+		margin-bottom: 0;
+	}
+	p.msg {
+		position: static;
+		font-size: 11px;
+	}
+	.wrppr {
+		padding-right: 3px;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+	.askastro .callbtn .follow.btn-style1 {
+		position: absolute;
+		bottom: 11px;
+		left: 10px;
+	}
+	body .askastro a.online_queue {
+		margin-left: auto;
+	}
+	.askastro .hik {
+		padding: 34px 0px;
+	}
+	body .onlineastro {
+		width: 100%;
+		display: inline-block;
+		margin-top: 0;
+		position: relative;
+	}
+	body #signup-dialog p.email i {
+		left: -95px;
+	}
+	.astroModalPopup {
+		width: 100%;
+	}
+	
+	.as_profile_text .astroModalPopup {width:20%; position:absolute !important; right:10px; bottom:14px; height:30px;}
+	
+	body select#ctry_code {
+		margin-bottom: 0;
+		top: 109px!important;
+		width: 52px
+	}
+	#genmobile p.email i {
+		top: 110px;
+	}
+	p#signuperrmsg+select#ctry_code {
+		top: 0px!important;
+	}
+	body .talk-section,
+	.ast_testimonial_wrapper {
+		display: none!important;
+	}
+	
+	
+	/* ===========Profile Page css ============= */
+	.detail_discription img {
+		width: 100px;
+		height: 100px;
+		margin-top: -30px;
+		margin-left: 0;
+		margin-bottom: 0;
+	}
+	.ast_toppadder80.ast_bottompadder80.profile {
+		padding-top: 0;
+	}
+	.profile .sidebar_wrapper {
+		margin-top: 7px;
+		margin-bottom: 10px;
+	}
+	.ast_pagetitle.profile-page {
+		padding: 68px 0px 20px!important;
+	}
+	.profile-page h2 {
+		font-size: 1.8rem;
+	}
+	body .ast_pagetitle ul.breadcrumb li a {
+		font-size: 1rem;
+	}
+	body .detail_discription h4 {
+		padding-top: 0;
+	}
+	.ast_team_box.detail_discription {
+		position: relative;
+		padding: 0;
+		border-left: 0;
+		border-top: 0;
+	}
+	.avtar-icon-dscpsn {
+		display: flex;
+		padding-bottom: 16px;
+	}
+	.avtar-icon-dscpsn img {
+		min-width: 100px;
+		border: 2px solid #fff;
+	}
+	.avtar-icon-dscpsn .avtar-icon-dscpsn-detail {
+		width: calc(100% - 100px);
+		text-align: left;
+		padding-left: 5px;
+	}
+	.avtar-icon-dscpsn-detail h4 {
+		text-align: left;
+	}
+	.avtar-icon-dscpsn-detail .row .col-lg-12 {
+		padding: 0;
+	}
+	.row.followup .col-md-6.col-xs-6 {
+		padding-left: 0;
+	}
+	.row.followup {
+		position: absolute;
+		left: 5px;
+		top: 75px;
+	}
+	.descriptionofAstro {
+		margin-left: 10px;
+	}
+	.descriptionofAstro {
+		margin-left: 10px;
+	}
+	
+	.ast_team_box.detail_discription br {
+		display: none;
+	}
+	.ast_team_box.detail_discription {
+		margin-bottom: 0;
+	}
+	.row.chatandcallbtn,
+	.communication {
+		position: fixed;
+		z-index: 2;
+		bottom: 0;
+		width: 100%;
+		background-color: #f4f4f4;
+		padding: 7px 15px;
+		left: 0;
+	}
+	.row.chatandcallbtn .online_queue {
+		font-size: 12px;
+		border-radius: 5px;
+	}
+	.ast_blog_info .ast_blog_info_heading {
+		font-size: 15px;
+		line-height: 7px;
+		margin-bottom: 0;
+	}
+	.profile .about_vender .ast_blog_info {
+		padding: 10px 20px 0;
+	}
+	a.morelink {
+		margin-top: 0;
+	}
+	body .ratinghere {
+		padding: 0px 20px 10px;
+	}
+	.starhere p {
+		font-size: 20px;
+	}
+	.starwithbar {
+		margin: 0;
+	}
+	.bar h4 {
+		margin: 0;
+		font-size: 14px;
+	}
+	body .bar-container div {
+		height: 10px;
+	}
+	.availability {
+		padding: 10px 16px 20px;
+	}
+	.availability h4 {
+		padding: 9px 10px;
+	}
+	.daysTbale {
+		margin-top: 10px;
+	}
+	.ast_footer_wrapper .row .col-lg-3.col-md-3.col-sm-2.col-xs-12,
+	.ast_footer_wrapper .row .col-lg-2.col-md-2.col-sm-2.col-xs-12,
+	.ast_footer_wrapper .row .col-lg-4.col-md-4,
+	.ast_footer_wrapper .row:first-child,
+	.ast_gettouch ul li:first-child,
+	.ast_gettouch ul li:first-child,
+	br {
+		display: none;
+	}
+	.ast_footer_wrapper .row .col-lg-3.col-md-3.col-sm-4.col-xs-12 {
+		width: 100%;
+		overflow: auto;
+	}
+	h4.widget-title.foo_mobile {
+		margin: 0px 0px 10px;
+	}
+	.ast_footer_wrapper.ast_bottompadder20 {
+		padding: 10px 0;
+	}
+	.ast_footer_wrapper .widget.text-widget {
+		margin-bottom: 10px;
+	}
+	.ast_gettouch ul li:first-child,
+	.so-on-desktop {
+		display: none;
+	}
+	.hide-on-desktop {
+		display: block;
+	}
+	.flowchart .GrayColor_light_a span.GrayColor_light_a {
+		top: 9px;
+	}
+	.wrppr {
+		bottom: 6px;
+	}
+	#login-dialog h2 {
+		font-size: 1.5rem!important;
+	}
+}
+
+
+/*mobile horizontal layout*/
+
+@media only screen and (max-width: 736px) {}
+
+@media only screen and (max-width: 667px) {}
+
+@media only screen and (max-width: 480px) {}
+
+@media only screen and (max-width: 414px) {}
+
+@media only screen and (max-width: 375px) {}
+
+@media only screen and (max-width: 360px) {}
+
+@media only screen and (max-width: 320px) {}
+
+@media only screen and (max-width: 321px) {
+	.mb_shw_flt {font-size:16px; font-weight:600; padding:0 15px; color:#fa8819; letter-spacing:0.5px; display:block !important;}
+	.none_mb_pg {display:none !important;}
+	body .astroheading button.btn {
+		padding: 6px 8px;
+		width: auto!important;
+	}
+	body .ast_logo a img {
+		width: 137px !important;
+		margin-right: 38px;
+	}
+	body .demo_m a {
+		padding: 8px 5px;
+		top: -40px;
+	}
+	body .ast_slider_wrapper {
+		height: 85vh;
+	}
+	body li.dropdown.user_icon.mobile_l {
+		top: -27px !important;
+	}
+	.user_icon img {
+		width: 20px;
+	}
+	body .astro-recharge .ast_btn {
+		line-height: 1.6em;
+	}
+	.callbtn {
+		width: 39%;
+	}
+	.askastro a.online_queue {
+		width: 71px;
+	}
+	body .filtertype a.panel-title [role="button"] {
+		text-transform: lowercase;
+	}
+	body .flowchart+.filtertype .action input#SearchAstrologer {
+		text-transform: lowercase;
+		font-size: 13px;
+	}
+	.flowchart a.Decoration_none.pty img {
+		right: -7px;
+	}
+}
+
+@media only screen and (max-width: 667px) {
+	.mb_shw_flt {font-size:16px; font-weight:600; padding:0 15px; color:#fa8819; letter-spacing:0.5px; display:block !important;}
+	.none_mb_pg {display:none !important;}
+	body .homechanges .hors-btn {
+		top: inherit;
+		bottom: inherit;
+		position: static;
+	}
+	.homechanges .line-25 {
+		margin-top: 0;
+	}
+	.homechanges .carou-3 .item img {
+		height: auto;
+	}
+	.homechanges .carousel-indicators {
+		margin-bottom: 0;
+		bottom: 3px;
+	}
+	.homechanges .hors-btn ul {
+		padding-left: 0;
+	}
+	.ast_download_box img {
+		height: auto;
+	}
+	.ast_slider_wrapper {
+		height: 70vh;
+	}
+	body .ast_download_box img {
+		height: auto;
+	}
+	.ast_logo {
+		padding-bottom: 0;
+	}
+	.ast_top_header .fixed-top.shrink {
+		max-height: 52px;
+	}
+	body .demo_m a {
+		top: -26px;
+	}
+	body .ast_logo a img {
+		margin-right: 48px;
+	}
+	body .hamburger {
+		top: 14px;
+		left: 0;
+	}
+	body .wallet_class {
+		width: 58%!important;
+	}
+	.price .ast_journal_box_wrapper form h3 {
+		margin-bottom: 10px;
+		font-size: 1.6rem;
+		margin-top: 0;
+	}
+	.astro-recharge .ast_btn {
+		width: auto;
+		min-width: auto;
+		height: auto;
+		max-height: 35px;
+		font-size: 10px;
+		line-height:1.6em;
+		margin-top: 0;
+		padding: 0 4px;
+	}
+	.ast_packages_box .ast_price {
+		padding: 0;
+		width:80px;
+		height:80px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 10px auto 0 auto;
+		z-index: 1;
+		border-radius: 10px!important;
+	}
+	.price .ast_journal_box_wrapper form h3 span {
+		font-size: 1.6rem;
+	}
+	.phone-icon {
+		right: 10px;
+	}
+	body .askastro .astronew-area {
+		right: 3px!important;
+		top: 75px!important;
+	}
+	body .askastro .astronew-area img {
+		box-shadow: none;
+	}
+	body .askastro .astronew-area {
+		z-index: 0;
+	}
+	/* Indian currency  */
+	body .discount-image img {
+		width: 26px;
+	}
+	body .discount-image span {
+		font-size: 10px;
+		line-height: 1em;
+	}
+	body .discount-area {
+		top: -14px;
+	}
+	body .discount-image1 img {
+		width: 50px!important;
+	}
+	.home_exprt {
+		padding-top: 24px;
+	}
+	body li.dropdown.user_icon.mobile_l {
+		top: -29px !important;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.timeleft {
+		width: 100%;
+		transform: translateX(0);
+		justify-content: flex-start;
+		left: 0;
+		flex-wrap: wrap;
+    padding: 10px;
+	}
+	/* .timeleft p:nth-child(1),
+.timeleft p:nth-child(3){
+    width: 70%;
+} */
+body ul#myList .ast_blog_comment {
+    align-items: flex-start;
+}
+body .chating .card-body {
+    padding-bottom: 30px;
+	padding-right: 5px;
+}
+.chating .msg_head{
+	
+	display: block;
+	}
+.timefooter .col-md-3, .timefooter .col-md-2, .timefooter .col-md-4{
+	padding: 0 5px;
+    text-align: left;
+}
+.timeleft p:nth-child(2),
+.timeleft p:nth-child(4) {
+    width: 30%;
+}
+.timeleft button.btn {
+    padding-left: 0;
+}
+	.padding_adjust .review_mobile {
+		margin-bottom: 0;
+	}
+.padding_adjust .notonline a.online_queue {
+    float: none;
+}
+
+.padding_adjust .notonline {
+    text-align: end;
+}
+.padding_adjust .wrppr {
+    padding-right: 10px!important;
+}
+	.followingpage .online-wrapper .astroModalPopup+.wrppr .notonline p.msg {
+		white-space: inherit;
+	}
+	.followingpage .follow.btn-style1 {
+		left: auto;
+		right: 0;
+		bottom:56px!important;
+	}
+	.followingpage .online-wrapper .astroModalPopup .online_queue {
+		position: relative;
+		right: 0;
+		top: 0;
+	}
+	.followingpage .astroModalPopup,
+	.followingpage .online-wrapper .astroModalPopup {
+		margin: 0;
+		position: static!important;
+	}
+
+	.followingpage .astroModalPopup .online-inner i.fa {
+		top: 15px;
+	}
+	.mb_shw_flt {font-size:16px; font-weight:600; padding:0 15px; color:#fa8819; letter-spacing:0.5px; display:block !important;}
+	.none_mb_pg {display:none !important;}
+	.askastro a.online_queue {
+		width: 71px; display: inline-block; float: right;
+	}
+	.onlineastro .online-inner i {top:15px; margin-right:6px;}
+	.wrppr .notonline i {top: 15px; margin-right: 5px;}
+	
+	.followingpage .notonline a.online_queue i.fa.fa-comments {
+		top: 8px;
+		margin-right: 3px;
+	}
+	
+	.askastro .as_profile_text .callbtn .wrppr,
+body .askastro .onlineastro  {
+    padding-right: 0px;
+}
+	.ast_footer_wrapper.ast_bottompadder20 {
+		padding-bottom: 146px;
+	}
+	body a#backToTop {
+		display: none!important;
+	}
+    .myastrofollowing .callbtn .wrppr .notonline i.fa.fa-phone.phone-icon {
+    top: 16px!important;
+}
+.followingpage .notonline.myastro-tele a.online_queue.cursor-pointer {
+    margin-left: auto!important;
+}
+.followingpage .wrppr .notonline:first-child .online_queue {
+    margin-right: 0!important;
+}
+	.communication .profile-tele span.pricepermin {
+		display: block;
+	}
+	/* .followingpage .astroModalPopup .onlineastro,
+	.wrppr .notonline:first-child {
+		    margin: 0;
+    padding-right: 0;
+    position: relative;
+    right: 10px;
+    top: -10px;
+	} */
+
+	
+	.followingpage .notonline.myastro-tele a.online_queue.cursor-pointer {
+		position: relative;
+		right: 0;
+		margin-left: 0!important;
+		top: 0;
+	}
+	.myastrofollowing .callbtn .wrppr .astroModalPopup {
+		width: auto;
+	}
+	.wrppr .notonline:first-child .online_queue {
+		padding: 6px 2px!important;
+	}
+	.myastrofollowing .callbtn .wrppr .notonline {
+		top: auto;
+		position: static;
+	}
+	
+	body .followingpage .astrologer_box.main_box {padding-bottom: 45px;}
+	
+	.myastrofollowing .callbtn .wrppr {
+		padding-bottom: 13px;
+	}
+	.communication .profile-tele .online_queue {
+		font-size: 0;
+	}
+	
+	.communication .profile-tele .online_queue i.fa {
+		font-size: 15px;
+	}
+	.myastrofollowing>.container,
+.myastrofollowing .tiles div#dummyDataForCrawler{
+    padding: 0;
+}
+
+.myastrofollowing>.container>.row {
+    margin: 0;
+}
+.followingpage .as_profile_font {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+}
+
+.followingpage span.ra {
+    font-size: 15px;
+    font-weight: 600;
+}
+body .followingpage ul.as_profile_text_ul li img{
+    display: none;
+}
+.askastro.followingpage .li:before {content: "";position: absolute;width: calc(100% + 55px);height: 1px;background-color: #9f9898;bottom: 0;z-index: 9999;}
+
+.askastro.followingpage .li {
+    position: relative;
+}
+
+body .followingpage .astrologer_box.main_box {
+    box-shadow: none;
+    border: 0!important;
+}
+
+.followingpage .rating-wrap span i {
+    margin-left: 0;
+}
+	
+	ul.dropdown-menu.fliterwala.firstfilter {
+		min-height: 320px;
+	}
+	
+	.secondfilter button {
+		border-left: 1px solid #ddd!important;
+		border-radius: 0;
+		border-right: 1px solid #ddd!important;
+	}
+	ul.dropdown-menu.fliterwala {
+		top: -177px;
+		max-height: 375px;
+		overflow-y: auto;
+		z-index: -1;
+	}
+	.astro-recharge .discount-area {
+		top: 0!important;
+	}
+	body .mfp-bg,
+	body .mfp-wrap {
+		height: 100%!important;
+		position: fixed!important;
+		top: 0!important;
+	}
+	
+	.commenthere .col-md-8 {
+		overflow: hidden;
+	}
+
+	.chat-to-astro .tiles div#dummyDataForCrawler {
+		padding: 0 15px;
+	}
+	.paytable.in td,
+	.paytable.in th,
+	.paytable.in tr {
+		padding: 15px!important;
+		line-height: 40px;
+	}
+	#myModalopn.paytable.in .close {
+		top: 6px;
+	}
+	.askastro a.online_queue {
+		position: static;
+		margin: 0;
+		padding: 6px 10px!important;
+	}
+	.astro-info .as_profile_tile {
+		width: 82%;
+	}
+	p.msg {
+		right: 10px;
+		
+	}
+	body .asktoastro_body {
+		flex-wrap: wrap;
+		justify-content: center!important;
+	}
+	.flowchart .GrayColor_light_a {
+		white-space: inherit;
+		margin: 0;
+	}
+	body .sicn {
+		padding: 11px;
+	}
+	.talkBox .hik {
+		background-color: #fff;
+	}
+	body span.ra {
+		margin: 0;
+	}
+	.home_blog {
+	
+	}
+	.price {
+		padding-left: 0;
+	}
+	.astro-recharge .col-lg-4 {
+		padding: 0 5px;
+		margin: 0;
+	}
+	.ast_packages_box {
+		padding: 5px;
+		margin-bottom: 10px;
+	}
+	
+	.ast_packages_box h3:after {
+		display: none;
+	}
+	.home_exprt {
+		padding-top: 24px;
+	}
+	.home_exprt .ast_heading {
+		margin-top: 0;
+	}
+	.paytable .modal-design {
+		padding: 0;
+	}
+	.paytable td,
+	.paytable th,
+	.paytable tr {
+		padding: 0!important;
+		line-height: 2em;
+		font-size: 14px;
+		border: 1px solid #87868661;
+	}
+	#myModalopn.paytable .close {
+		font-size: 14px;
+		height: 20px;
+		width: 20px;
+		right: 5px;
+		top: -8px;
+	}
+	#myModalopn.paytable .close i {
+		font-size: 11px;
+		text-align: center;
+		line-height: 20px;
+		display: block;
+		vertical-align: middle;
+		margin-left: 6px;
+		margin-top: -1px;
+	}
+	.paytable table+br {
+		display: none;
+	}
+	.paytable p#promo {
+		margin: 5px 0;
+		font-size: 13px;
+	}
+	.paytable .form-group {
+		margin: 0;
+	}
+	.paytable .form-group button {
+		height: auto;
+		line-height: 29px;
+	}
+	.ast_packages_box .ast_price h2 {
+		font-size: 1.8rem;
+		padding: 3px;
+	}
+	body .ast_packages_box h3 {
+		font-size: 1.2rem;
+	}
+	.astro-recharge h3 {
+		margin: 0;
+		padding: 8px 0!important;
+		font-size: 1.8rem;
+	}
+	.ast_bottompadder70.walletpage {
+		padding: 10px 0;
+	}
+	.price .ast_journal_box_wrapper form {
+		padding: 10px;
+	}
+	@keyframes fadeInDown {
+		0% {
+			opacity: 0;
+			transform: translate3d(0, -100%, 0);
+		}
+		100% {
+			opacity: 1;
+			transform: none;
+		}
+	}
+	body .pagination {
+		justify-content: center;
+	}
+	body .showtot {
+		text-align: center;
+	}
+	.w-100 {
+		width: 100%;
+	}
+	.product_detail_wrap .slick-slide {
+		z-index: 2!important;
+		width: 100%!important;
+	}
+	.ast_top_header .fixed-top.shrink {
+		background-color: rgba(0, 0, 0, .7);
+		position: fixed;
+		z-index: 1000;
+		padding: 0 15px;
+		-moz-box-shadow: 0 -5px 20px;
+		-webkit-box-shadow: 0 -5px 20px;
+		box-shadow: 0 -5px 20px;
+		animation-name: fadeInDown;
+		animation-duration: 1s;
+		animation-fill-mode: both;
+	}
+	#myModalopn .modal-design {
+		margin: 0;
+	}
+	.fliter-box {
+		position: fixed;
+		bottom: 0;
+		z-index: 1;
+		background-color: #ffff;
+		width: 100%;
+		left: 0;
+		box-shadow: 0 1px 5px 0 rgb(0 0 0 / 10%);
+	}
+	body .hamburger {
+		z-index: 999;
+	}
+	.searchastro.action.clicked {
+		position: absolute;
+		width: 87%;
+	}
+	body .flowchart+.filtertype .action input#SearchAstrologer:focus {
+		background-color: #fff!important;
+	}
+	.searchastro.action.clicked+.showmobile i:before {
+		content: "\f00d";
+	}
+	.flowchart+.filtertype .fliter-box .action:last-child {
+		min-width: auto;
+		z-index: 1;
+		background-color: #ffff;
+	}
+	body .tawk-min-container .tawk-button-circle.tawk-button-large {
+		width: 50px;
+		height: 50px;
+		top: 1px;
+	}
+	body a#backToTop {
+		bottom: 38px;
+		left: 7px;
+	}
+	#yhg5q1njvpag1fibkvdsh {
+		top: 45px!important;
+	}
+	.filtertype a.panel-title [role="button"] {
+		font-size: 13px;
+		padding: 0 8px!important;
+	}
+	.flowchart+.filtertype .action {
+		margin: 0;
+	}
+	.flowchart+.filtertype .action i {
+		margin-right: 0;
+	}
+	body .sicn {
+		background-color: transparent;
+		padding: 0;
+		color: #000;
+		right: 10px!important;
+	}
+	.flowchart+.filtertype .panel.panel_heading {
+		padding: 0;
+		border: 0!important;
+	}
+	.flowchart+.filtertype .action input#SearchAstrologer {
+		padding: 10px 0;
+		min-height: 29px;
+		border: 0!important;
+	}
+	.flowchart+.filtertype .action:last-child .form-group.pull-left {
+		width: 90%;
+	}
+	.showmobile {
+		width: 10%;
+		overflow: auto;
+		position: fixed;
+		z-index: 9999;
+		bottom: 0;
+		right: 0;
+		height: 36px;
+		background-color: #fff;
+		line-height: 36px;
+		text-align: center;
+	}
+	.showmobile {
+		display: block;
+	}
+	.seachbar .form-group.pull-left {
+		margin-bottom: 0;
+	}
+	.hidemobile {
+		display: none;
+	}
+	.shortby.action div[role="button"] {
+		border-left: 1px solid;
+		border-right: 1px solid;
+	}
+	.flowchart+.filtertype .catefilter.action .collapse.in {
+		top: -308px;
+		width: 100%;
+		padding-left: 10px;
+		padding-right: 15px;
+	}
+	.flowchart+.filtertype .shortby.action .collapse.in {
+		top: -230px;
+		width: 100%;
+		left: 0;
+		padding-left: 10px;
+	}
+	.filtertype .dropdown-content.show {
+		top: -309px;
+		width: 100%;
+		left: 0;
+		padding-left: 10px;
+		border-radius: 0;
+		border: 0;
+	}
+	.flowchart+.filtertype .panel.panel_heading {
+		position: static;
+	}
+
+	/* Following page/My  astrologer page */
+	body .followingpage .astro-info .follow.btn-style1 {
+		right:3px;
+		left: auto;
+		top: 0;
+		display:block;
+		}
+	
+	.followingpage .img_profile {
+		width: 70px!important;
+		height: 70px!important;
+	}
+	
+	body .followingpage .astrologer_box.main_box {
+		padding-left:79px;
+	}
+	
+	body .followingpage ul.as_profile_text_ul {
+		left: auto;
+		top: auto;
+		padding-left: 10px;
+	}
+	
+	.followingpage.askastro .as_profile_text {
+		padding-top: 0!important;
+	}
+	
+	.followingpage .astro-info .as_profile_tile {
+		padding-left: 0!important;
+	}
+	.followingpage .review_mobile {
+		position: absolute;
+		top:83px;
+		left: 17px;
+		background-color: #fff;
+		border:1px solid #ff8820;
+		padding: 2px 10px;
+		border-radius: 15px;
+		margin-top: 7px;
+		font-size: 14px;
+	}
+	body .followingpage .astrologer_box.main_box {
+		min-height: auto;
+		padding-bottom: 74px;
+	}
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.mb_shw_flt {font-size:16px; font-weight:600; padding:0 15px; color:#fa8819; letter-spacing:0.5px; display:block !important;}	
+	.none_mb_pg {display:none !important;}
+	.ratinghere {
+		max-width: 75%;
+	}
+	.ast_top_header .fixed-top {
+		width: 100%;
+		display: flex;
+		float: none;
+		justify-content: space-between;
+		align-items: center;
+	}
+	body .discount-area {
+		right: -150px;
+		top: 8px;
+	}
+	.widgetWrap {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		overflow: auto;
+	}
+	.widgetWrap aside.widget {
+		float: none;
+		width: 45%;
+		margin: 0 18px;
+	}
+	.ast_top_header .fixed-top .ast_logo {
+		float: none;
+		width: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.ast_top_header .fixed-top .ast_logo a {
+		overflow: auto;
+		display: inline-block;
+		max-width: 50%;
+	}
+	.col-sm-8.col-md-offset-2.GrayColor_light_a.P0Mobile {
+		margin: 27px 0px 0!important;
+	}
+	.ast_top_header .fixed-top .ast_logo img {
+		padding-left: 102px;
+		width: auto;
+	}
+	body .demo_m {
+		display: block;
+	}
+	.demo_m a {
+		color: #fff;
+		font-size: 10px;
+		background: #ff8820;
+		padding: 8px 11px;
+		border: 1px solid #fff;
+		border-radius: 4px;
+		font-size: 11px;
+		font-weight: 600;
+	}
+	.ast_menu_btn {
+		top: 7px;
+		font-size: 27px;
+	}
+	.ast_top_header .ast_contact_details {
+		display: none;
+	}
+	.ast_header_bottom .row {
+		background-color: transparent;
+	}
+	.ast_main_menu_wrapper {
+		width: 270px;
+	}
+	.hors-btn ul li a {
+		border-radius: 7px;
+		margin-right: 10px;
+		background: #ff8820;
+		color: #fff;
+		padding: 8px 5px;
+		font-size: 14px;
+		font-weight: bold;
+	}
+	.hors-btn ul li {
+		display: inline-block;
+		margin-top: 15px;
+		margin-bottom: 10px;
+	}
+	body .hors-btn {
+		display: block;
+	}
+	.ast_slider_wrapper {
+		height: 60vh;
+	}
+	.ast_img_overlay+.container .col-md-12.col-md-12.col-sm-12.col-xs-12 .col-md-3.col-xs-12 {
+		width: 25%;
+	}
+	.ast_img_overlay+.container .col-md-12.col-md-12.col-sm-12.col-xs-12 .GrayColor_light_a {
+		margin-top: 0;
+	}
+	.homechanges .ingGray {
+		border-bottom: 2px solid #ff8820!important;
+		left: 75px;
+		top: 52px;
+	}
+	.sidebardown .ast_main_menu_wrapper.ast_main_menu_hide {
+		top: 52px;
+	}
+	.astro-recharge .col-lg-4 {
+		padding: 0 5px;
+	}
+	.ast_packages_box .ast_price {
+		margin: 10px 0;
+		width: 60px;
+		height: 60px;
+		padding-top: 5px;
+	}
+	.ast_packages_box .ast_price h2 {
+		font-size: 1.3rem;
+	}
+	body .wallet_class {
+		width: 30%!important;
+		margin-bottom: 10px;
+	}
+	.astro-recharge button {
+		margin-top: 0;
+		height: auto;
+		line-height: 25px;
+		padding: 0 10px;
+		width: auto;
+		min-width: auto;
+	}
+	.price .ast_journal_box_wrapper h3 {
+		margin: 0;
+		font-size: 1.3rem;
+	}
+	.price .ast_journal_box_wrapper form h3 span {
+		font-size: 1.5rem;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	
+	body .flowchart+.filtertype .panel.panel_heading,
+	.flowchart+.filtertype .action {
+		width: 200px;
+		padding: 0;
+	}
+	
+	.communication .profile-tele .online_queue {
+		width: 100%;
+		text-align: center!important;
+		justify-content: center;
+		padding-left: 0;
+		font-size: 14px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.ast_pagetitle.banner-remove .ast_img_overlay {
+		height: 53px;
+	}
+	
+	.chat-to-astro .astroheading {
+		padding-top: 50px;
+	}
+	#gensignup p {
+		position: relative;
+		overflow: auto;
+	}
+	.loader.center {
+		position: fixed;
+		z-index: 9;
+	}
+	body #signup-dialog p.email i {
+		left: 0;
+		position: absolute;
+		top: 14px;
+	}
+    /* Chating page css */
+    .d-flex.bd-highlight {
+        flex-direction: column;
+        position: relative;
+    }
+    
+    .username-wrap {
+        margin: 0;
+        flex-grow: inherit;
+    }
+    
+    .chating .user_info {
+        margin: 0;
+        position: absolute;
+        top: 0;
+        right:0;
+    }
+    
+    .chat-person {
+        margin-left: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 5px;
+    }
+    
+    .chating .card-header {
+        padding: 0;
+    }
+    
+    .chating .card-body {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .chating .img_cont {
+        position: absolute;
+        top: 0;
+        left:50%;
+    }
+
+
+	body li.dropdown.user_icon.mobile_l ul.dropdown-menu {
+		left: -70px;
+		top: 39px;
+	}
+	body .flowchart+.filtertype .action div[role="button"],
+	body .flowchart+.filtertype .action input#SearchAstrologer,
+	.showmobile,
+	input#SearchAstrologer[type="text"]::-webkit-input-placeholder {
+		font-size: 16px;
+		font-weight: 700;
+	}
+	.row.followup .col-md-6.col-xs-6.notifyme {
+		position: fixed;
+		z-index: 9999;
+		bottom: 82px;
+		background-color: #f4f4f4;
+		width: 100%;
+		left: 0;
+		padding: 7px 15px;
+		/* box-shadow: 0 1px 6px 0 rgb(32 33 36 / 77%); */
+	}
+	body .communication {
+		padding-top: 37px;
+	}
+	.row.followup .col-md-6.col-xs-6.notifyme button.btn {
+		font-size: 14px;
+		color: #000000;
+		font-weight: 600;
+		background-color: transparent;
+		border-color: #000;
+		border-radius: 5px;
+		min-width: 100px;
+	}
+	.notificationtext {
+		font-size: 16px;
+		color: #000000;
+		font-weight: 600;
+	}
+	.communication .online_queue {
+		font-size: 16px;
+	}
+	.notifyme button.btn i {
+		font-size: 15px;
+		color: #ff8820;
+	}
+	.notificationtext {
+		display: block;
+	}
+	.notifyme .follow.btn-style1 {
+		display: flex;
+		justify-content: space-between;
+	}
+	.descriptionofAstro {
+		position: relative;
+	}
+	.astronew-area {
+		position: absolute;
+		z-index: 9;
+		top: 10px !important;
+		left: inherit !important;
+		right: 0 !important;
+	}
+	.astronew-area .discount-image img {
+		width: 35px !important;
+		height: 35px !important;
+		float: left;
+		position: relative;
+		top: 5px;
+		left: -5px;
+	}
+	#menagesd .owl-stage-outer .owl-stage .owl-item .item .astro-image img {
+		width: 150px !important;
+		height: 150px !important;
+		margin: 0 auto;
+	}
+	.askastro a.online_queue {
+		font-size: 15px !important;
+		font-weight: normal !important;
+	}
+	.discount-area {
+		position: absolute;
+		top: -75px !important;
+	}
+	.discount-area .discount-image span {
+		top: 28px;
+		left: 24px;
+	}
+	.morecontent,
+	.astroheading h3 {
+		display: none;
+	}
+	body .astroheading button.btn {
+		background-color: transparent;
+		border: 1px solid;
+		font-weight: 600;
+		width: 165px;
+	}
+	.astroheading .hide-on-desktop {
+		display: block;
+	}
+	.astroheading {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	body .astroheading button.btn.active {
+		background-color: #fa8819;
+		color: #fff;
+		border-color: #fa8819;
+	}
+}
+
+@media (min-width: 768px) {
+	.chating .modal-dialog {
+		width: 750px
+	}
+}
+@media (min-width:1199px) {
+	body .followingpage .wrppr .notonline a.online_queue {
+		position: relative;
+	}
+}
+
+
+

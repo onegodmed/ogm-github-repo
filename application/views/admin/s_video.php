@@ -1,0 +1,1 @@
+<iframe src="https://tokbox.com/embed/embed/ot-embed.js?embedId=59e789a6-c4db-405d-b6e1-21dedb18aadc&room=DEFAULT_ROOM&iframe=true" width=800 height=640 scrolling="auto" allow="microphone; camera" ></iframe>

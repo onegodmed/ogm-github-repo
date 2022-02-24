@@ -1,0 +1,1357 @@
+
+<!-- ======================= Page Title ===================== -->
+
+<div class="page-title banner_img_body">
+        <div class="container">
+            <div class="page-caption">
+                <h3 class="text_heading_banner">
+                    <?php 
+                    if($this->session->userdata('user_type')=='developer') 
+                        echo "How client see your profile";
+                    else
+                        echo 'Developer Profile';
+                        ?>
+                    
+                </h3>
+                <p><a href="<?=base_url();?>" title="Home">Home</a> <i class="ti-arrow-right"></i> <a href=""  onclick="window.history.go(-1); return false;" >Search Results</a></p>
+            </div>
+        </div> 
+    </div>
+<!-- ======================= End Page Title ===================== -->
+<?php if ($is_admin) { ?>
+<style>
+    p{font-size: 14px;}
+    select.form-control:not([size]):not([multiple]) {height: calc(2.25rem + 25px);}
+    .media {margin-top: 0px;}
+</style>
+<?php }
+?>
+<script src="<?= base_url() ?>assets/js/readmore.min.js"></script>   
+<!-- <div class="col-md-12 col-xs-12 col-sm-12" ><h3 class="dev_heading">How client see your profile
+<span></span>
+</h3></div> -->
+<!-- ================ Job Detail Basic Information ======================= -->
+<section>
+
+<div class="col-md-12 col-sm-12">
+    <div class="col-md-4">
+        <?php if ($show_edit) { ?>
+            <div class="editpanel">
+                <a href="#" data-toggle="modal" data-target="#myModal" onclick="call_section('11')"><i class="glyphicon glyphicon-pencil pencil-back"></i></a>
+            </div>
+        <?php } ?>
+        <?php
+        $i = 0;
+        $value = @$user['developer_profile_videos'][0];
+        if (!empty($value)) {
+            $url = $value->video;
+            $bas = base_url();
+            $path_temp = str_replace($bas, '../../', $url);
+            $path_info = pathinfo($url);
+            ?>
+            <div class="image-tabpanel" id="change_it">
+                <video controls="">
+                    <source src="<?= @$path_temp ?>" type="video/<?= @$path_info['extension']; ?>" id="main-video">
+
+                    Your browser does not support the video tag.
+                </video>
+            <!-- <img src="assets/img/client-1.jpg" class="img-responsive"> -->
+            </div>
+
+            <div class="img-tab-body">
+                <ul>
+
+                    <?php
+                    foreach ($user['developer_profile_videos'] as $key => $value) {
+                        $url = $value->video;
+                        $bas = base_url();
+                        $path_temp = str_replace($bas, '../../', $url);
+                        $path_info = pathinfo($url);
+                        ?>
+                        <li>
+                            <a href="#" class="change_it"  data-item-url="<?= $path_temp ?>" data-item-type="video/<?= @$path_info['extension']; ?>" >
+                                <video width="100" id="main_video">
+                                    <source src="<?= @$path_temp ?>" type="video/<?= @$path_info['extension']; ?>">
+
+                                    Your browser does not support the video tag.
+                                </video>
+                            <!--<img src="<?= $path_temp ?>" height="100" width="100">-->
+                            </a>
+                        </li>
+                    <?php } ?>
+
+                </ul>
+            </div>
+        <?php } else {
+            ?> 
+        <img src="<?= base_url(); ?>assets/img/no-video.gif" alt="No Video found" width="390" style="padding-bottom: 75px;"> 
+        <?php } ?>
+
+           
+            
+        <div class="time-zone" >
+                    <h4 ><!-- <i class="ti-clock-pin padd-r-10"></i>  -->Availability</h4>
+                    <?php if ($show_edit) { ?>
+                    <div class="editpen">
+                        <a href="#"  data-toggle="modal" data-target="#myModal" onclick="call_section('10')" ><i class="glyphicon glyphicon-pencil pencil-back"></i></a>
+                    </div>
+                    <?php } ?>
+                    <?php
+                    $timezone_array = array('0' => '');
+                    $count = 0;
+                    if ($user[0]->timezons != '') {
+                        $timezone_array = explode(",", trim(@$user[0]->timezons, ','));
+                        foreach ($timezone_array as $key => $value) {
+                            ?>
+                            <i class="glyphicon glyphicon-time padd-r-10 bluecolorone"></i><?= ucwords($value) ?><br> 
+                        <?php }
+                    } else
+                        echo "Timezone not selected yet.";
+                    ?>                                            
+
+                </div>      
+            
+            
+    </div>
+    <div class="col-md-5">        
+        <?php if ($show_edit) { ?>
+            <div class="editpanel">
+                <a href="#"  data-toggle="modal" data-target="#myModal" onclick="call_section('1')" ><i class="glyphicon glyphicon-pencil pencil-back"></i></a>
+            </div>
+        <?php } ?>
+        <div class="box detail-wrapper">
+            <div class="detail-wrapper-body">
+
+                <div class="col-md-12">
+                    <div class="job-title-bar">
+                        <h3 class="positionname"><?= @$user['positions'][0]->position_name ?> <?= ($skill_head['skills'] != '') ? " ( " . $skill_head['skills'] . " ) " : ''; ?> </h3>
+                        <div>
+                            <div class="cmp-job-rating stars-tip">
+                                <ul>
+                                    <li>
+                                        <?php echo rating($user[0]->review_rating); ?>
+                                        <span class="rating-counter"><?= empty($user[0]->review_rating) ? "0" : round($user[0]->review_rating); ?>/5</span>                                            
+                                    </li>
+                                    <li><a href="#" title="">(<?= $user[0]->review_count ?> Review)</a></li>
+                                </ul>
+
+                            </div>
+                            <span>
+
+                                <span class="tip-contenttwo animated fadeInLeft">
+                                    <div class="col-sm-12 col-xs-12"> 
+
+                                        <div class="row">
+                                            <div class="col-md-4 headingone"> Competency  </div>
+                                            <div class="col-md-5">
+                                                <?php echo rating($user[0]->avg_star_competency); ?>                
+                                                <span class="total-rating"><?= round($user[0]->avg_star_competency) ?><small>/ 5</small></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-4 headingone"> Reliability   </div>
+                                            <div class="col-md-5">
+                                                <?php echo rating($user[0]->avg_star_reliability); ?>                
+                                                <span class="total-rating"><?= round($user[0]->avg_star_reliability) ?><small>/ 5</small></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-4 headingone"> Honesty  </div>
+                                            <div class="col-md-5">
+                                                <?php echo rating($user[0]->avg_satr_honesty); ?>                
+                                                <span class="total-rating"><?= round($user[0]->avg_satr_honesty) ?><small>/ 5</small></span>
+                                            </div>
+                                        </div>
+                                    </div></span>
+                            </span>
+                        </div>
+                        <div class="col-md-12">
+
+                            <label>See all types</label>
+                            <?php if ($show_edit) { ?>
+                                <!--<div class="editpanel">-->
+                                <a href="#" data-toggle="modal" data-target="#myModal" onclick="call_section('4')"><i class="glyphicon glyphicon-pencil pencil-back"></i></a>
+                                <!--</div>-->
+                            <?php } ?>
+                            <div class="row">
+                                <div class="" role="tabpanel">
+                                    <!-- Nav tabs -->
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <?php
+                                        $class = "active";
+                                        
+                                        $job_type = "";
+                                        if ($user[0]->is_full_time) {
+                                            $job_type = "Full Time";
+                                            ?>
+                                            <li role="presentation" class="<?= $class ?> price-box overlay" <?php echo ($is_login) ? '' : 'data-toggle="modal" data-target="#signin"' ?> ><a href="#home" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true" onclick="full_time();">Full Time
+                                                    <br>
+                                                    <span <?php echo ($is_login) ? '' : 'class="blurry-text"' ?> ><?php echo $user[0]->full_time_amount ?>$/hr</span>                                                                          
+                                                    <?php echo ($is_login) ? '' : '<span class="overtext">Login</span>' ?>
+                                                </a></li>
+                                            <?php
+                                            $class1 = "fulltime";
+                                            $class = "";
+                                        } if ($user[0]->is_part_time) {
+                                            if ($job_type == '')
+                                                $job_type = "Part Time";
+                                            ?>
+                                            <li role="presentation" class="<?= $class ?> price-box" <?php echo ($is_login) ? '' : 'data-toggle="modal" data-target="#signin"' ?>><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="true" onclick="part_time();">Part Time
+                                                    <br><span <?php echo ($is_login) ? '' : 'class="blurry-text"' ?> ><?php echo $user[0]->part_time_amount ?>$/hr</span>
+                                                    <?php echo ($is_login) ? '' : '<span class="overtext">Login</span>' ?>
+                                                </a></li>
+                                            <?php
+                                            $class = "";
+                                        } if ($user[0]->is_contract) {
+                                            if ($job_type == '')
+                                                $job_type = "Contract";
+                                            ?>
+                                            <li role="presentation" class="<?= $class ?> price-box" <?php echo ($is_login) ? '' : 'data-toggle="modal" data-target="#signin"' ?>><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab" aria-expanded="false" onclick="contract();">Contract
+                                                    <br><span <?php echo ($is_login) ? '' : 'class="blurry-text"' ?> ><?php echo $user[0]->contract_amount ?>$/hr</span>
+                                                       <?php echo ($is_login) ? '' : '<span class="overtext">Login</span>' ?>
+                                                </a></li>
+                                            <?php
+                                            $class = "";
+                                        }
+                                        ?>
+                                    </ul>
+                                    <?php if ($user[0]->is_contract || $user[0]->is_part_time || $user[0]->is_full_time) { ?>
+                                        <!-- Tab panes -->
+                                        <div class="tab-content tabs border-grey">
+                                            <?php 
+                                            $is_active_done=false;
+                                            if ($user[0]->is_full_time) {?>
+                                            <div role="tabpanel" class="tab-pane fade active in" id="home">
+                                                <p><?php echo @$job_type_description[0]->full_time?></p>
+                                            </div>
+                                            <?php $is_active_done=true;} 
+                                            if ($user[0]->is_part_time) {?>
+                                            <div role="tabpanel" class="tab-pane fade <?=($is_active_done) ? '' : "active in"?>" id="profile">
+                                                <p><?php echo @$job_type_description[0]->part_time?></p>
+                                            </div>
+                                            <?php $is_active_done=true;} if ($user[0]->is_contract) {?>
+                                            <div role="tabpanel" class="tab-pane fade <?=($is_active_done) ? '' : "active in"?>" id="messages">
+                                                <p><?php echo @$job_type_description[0]->contract?></p>
+                                            </div>
+                                            <?php } ?>
+                                        </div>
+                                    <?php } ?>
+                                </div>                                   
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+
+                <div class="col-md-12">
+            <!--                        <p><strong>level</strong> :Basic  
+                        <a href="#" class="veri-btn"><i class="glyphicon glyphicon-ok"></i></a>
+                    </p>-->
+                    <p><strong>Overall Experience </strong> :<?= $user[0]->overall_experince ?> <!-- <span class="mrg-l-5 job-tagone bg-success-light">verified by YDS</span> -->
+                        <!--<a href="#" class="veri-btn"><i class="glyphicon glyphicon-ok"></i></a>-->
+                    </p>
+
+                    <?php
+//                        echo "<pre>";print_r($skill_head[0]);exit;
+                    foreach ($skill_head[0] as $key => $skill) {
+                        ?>
+                        <p><strong><?= $skill['skill_name'] ?></strong> experience : <?= $skill['experience'] ?> - <?= $skill['level'] ?>  .<?php if ($skill['is_verified']) { ?><span class="mrg-l-5 job-tagone bg-success-light">verified by YDS</span><?php } ?></p>
+                    <?php } ?>
+<!--                        <p><strong>Phython/Django experience</strong> :2+ Years.<a href="#" class="veri-btn"><i class="glyphicon glyphicon-ok"></i></a></p>
+<p><strong>Golang experience</strong> :6 months<a href="#" class="veri-btn"><i class="glyphicon glyphicon-ok"></i></a></p>
+<p><strong>Node.js/Angularjs experiencee</strong> :3+ Years<a href="#" class="veri-btn"><i class="glyphicon glyphicon-ok"></i></a></p>-->
+                    <p><strong>Willing To Travel</strong>: Yes</p>
+                </div>
+
+
+                <div class="col-md-12">
+                    <p><strong>Profile Description</strong>
+                        <?php if ($show_edit) { ?>
+                            <a href="#"  data-toggle="modal" data-target="#myModal" onclick="call_section('2')"><i class="glyphicon glyphicon-pencil pencil-back"></i></a></p>
+                    <?php } ?>
+                    <article class=" slide article article-slidecontent">
+                        <?= $user[0]->profile_description ?>
+                    </article>
+                    <!--<a type="button"  data-toggle="collapse" data-target="#demo" style="color:#444;">More</a></strong></p>-->
+
+                    <!--                        <div id="demo" class="collapse">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                            </div>-->
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Start: Portfolio Project List -->
+    </div>      
+    <div class="col-md-3">
+
+
+        <?php
+        $job_type_value = "";
+        if (!$show_edit) {
+
+            switch ($job_type) {
+                case "Full Time":
+                    $job_type_value = 'full time';
+                    $rate = $user[0]->full_time_amount;
+                    $rate_label = "Hourly";
+                    break;
+
+                case "Part Time":
+                    $job_type_value = 'part time';
+                    $rate = $user[0]->part_time_amount;
+                    $rate_label = "Hourly";
+                    break;
+
+                case "Contract":
+                    $job_type_value = 'contract';
+                    $rate = $user[0]->contract_amount;
+                    $rate_label = "Contract";
+                    break;
+
+                default:
+                    break;
+            }
+            if ($job_type_value != '' && $is_client) {
+                ?>
+                <div class="box sidebar">
+                    <!-- Start: Job Overview -->
+                    <div class="widget-boxed">
+                        <div class="widget-boxed-header">
+                            <h4 id="job_type_headig"><i class="ti-clock-pin padd-r-10"></i><?php echo $job_type; ?></h4>
+                        </div>
+                        <div class="widget-boxed-body">
+                            <form method="POST" action="<?= base_url('client/hire_now/' . $user[0]->user_id) ?>" id="hire_form">
+                                <input type="hidden" name="job_type" value="<?php echo $job_type_value; ?>" id="job_type_val">
+                                <div class="side-list no-border">
+                                    <ul>                    
+                                        <li id="rate"><i class="ti-credit-card padd-r-10"></i><?php echo $rate_label . ":" . $rate ?>$/hr</li>
+                                        <li id="start_date_row">
+                                            <div class="">
+                                                <input type="text" class="form-control" placeholder="Start Date" name="start_date" id="start_date">                                                    
+                                            </div>
+                                        </li>
+                                        <li id="end_date_row">
+                                            <div class="">
+                                                <input type="text" class="form-control" placeholder="End Date" name="end_date" id="end_date">                                                    
+                                            </div>
+                                        </li>      
+
+                                        <li id="hours_row">
+                                            <div class="">
+                                                <label>Hours</label>
+                                                <input type="number" class="form-control" placeholder="Contract Hours" name="contact_hours" id="contact_hours" value="">
+                                            </div>
+                                        </li>
+                                        <li id="amount_row">
+                                            <div class="">
+                                                <label>Total Amount</label>
+                                                <input type="number" class="form-control" placeholder="Totla Amount" name="contract_amount" id="contract_amount" value="" readonly="">                                                    
+                                            </div>
+                                        </li>        
+                                    </ul>
+
+                                    <h5>Charges will be 200$/weekly</h5>
+
+                                </div>
+                                <div>
+                                    <a href="javascript:form_submit();" class="btn btn-m theme-btn full-width"><i class="fa fa-paper-plane"></i>Hire Now</a>
+                                    <hr>
+                                    <!--<a href="https://calendly.com/shivani-8/60min/07-26-2018?name=<?php echo $this->session->userdata('first_name') . ' ' . $this->session->userdata('last_name'); ?>&email=<?php echo $this->session->userdata('email'); ?>&a1=16509242528&a2=<?= $user[0]->id ?>" class="btn btn-m light-gray-btn full-width"><i class="fa fa-info"></i> Schedule Interview</a>-->
+                                    <a href="<?php echo base_url('client/interview_schedule/'.$user[0]->user_id )?>" class="btn btn-m light-gray-btn full-width"><i class="fa fa-calendar"></i> Schedule Interview</a>
+                                </div>
+                                <div class="twolink_box">
+                                    <a href="#9" class="askbtn">Ask Question</a>
+
+                                </div>
+                            </form>
+                        </div>
+                        <a href="<?php echo base_url('client/report_problem/'.$this->uri->segment(3))?>" class="reportbtn">Report a Problem <i class="fa fa-long-arrow-right"></i></a>
+
+                    </div>
+                    <!-- End: Job Overview -->
+                </div>
+                <?php
+            }
+        }
+        ?>
+        <?php if ($is_admin) { ?>   
+            <div class="box sidebar">
+                <!-- Start: Job Overview -->
+                <div class="widget-boxed">
+                    <div class="widget-boxed-header">
+                        <!--<h4><i class="ti-clock-pin padd-r-10"></i>Full Time</h4>-->
+                    </div>
+                    <div class="widget-boxed-body">                      
+                        <div>                                                     
+                           <a href="#" onclick="overall_prifile_verify()" class="btn btn-m theme-btn full-width"><i class="fa fa-check"></i> Over all verify </a>
+                             <hr>
+                             
+                            <a href="<?php echo base_url('admin/interview_schedule/'.$user[0]->user_id )?>" class="btn btn-m light-gray-btn full-width"><i class="fa fa-info"></i> Schedule Interview</a>
+                            
+                             <hr>
+                           <a href="#" onclick="prifile_verify()" class="btn btn-m theme-btn full-width"><i class="fa fa-check"></i> Profile verify </a>                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <!-- End: Job Overview -->
+            </div>
+        <?php } ?>
+
+
+        <div>
+            <div class="col-sm-12 mrg-bot-10">
+<!--                    <div class="time-zone">
+                    <h4 ><i class="ti-clock-pin padd-r-10"></i> Availability</h4>
+                    <?php if ($show_edit) { ?>
+                    <div class="editpanel">
+                        <a href="#"  data-toggle="modal" data-target="#myModal" onclick="call_section('10')" ><i class="glyphicon glyphicon-pencil pencil-back"></i></a>
+                    </div>
+                    <?php } ?>
+                    <?php
+                    $timezone_array = array('0' => '');
+                    $count = 0;
+                    if ($user[0]->timezons != '') {
+                        $timezone_array = explode(",", trim(@$user[0]->timezons, ','));
+                        foreach ($timezone_array as $key => $value) {
+                            ?>
+                            <i class="glyphicon glyphicon-time padd-r-10 bluecolorone"></i><?= ucwords($value) ?><br> 
+                        <?php }
+                    } else
+                        echo "Timezone not selected yet.";
+                    ?>                                            
+
+                </div>-->
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="box">
+        <div class="detail-wrapper">
+            <div class="detail-wrapper-header">
+                <h4>Interview Video List  
+                    <!--<a href="#"  data-toggle="modal" data-target="#myModal" onclick="call_section('11')" ><i class="glyphicon glyphicon-pencil pencil-back"></i></a>-->
+                </h4>
+            </div>
+            <div class="detail-wrapper-body">
+                <div class="col-md-12">
+                    <div class="col-md-4">
+                        <a href="#videoModel"  data-toggle="modal" class="video-dumy"><video>
+                                <source src="../../assets/video/movie.mp4" type="video/mp4">
+
+                                Your browser does not support the video tag.
+                            </video>
+                            <h5 style="text-align:center;">Wordpress</h5></a>
+
+
+
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#videoModel"  data-toggle="modal" class="video-dumy"><video>
+                                <source src="../../assets/video/movie.mp4" type="video/mp4">
+
+                                Your browser does not support the video tag.
+                            </video>
+                            <h5 style="text-align:center;">Wordpress</h5></a>
+
+
+
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#videoModel"  data-toggle="modal" class="video-dumy"><video>
+                                <source src="../../assets/video/movie.mp4" type="video/mp4">
+
+                                Your browser does not support the video tag.
+                            </video>
+                            <h5 style="text-align:center;">Wordpress</h5></a>
+
+
+
+                    </div>
+                </div>
+
+
+                <div class="bs-example">
+                    <!-- Button HTML (to Trigger Modal) -->
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="box">
+        <div class="detail-wrapper">
+            <div class="detail-wrapper-header">
+                <h4>Skills  
+                    <?php if ($show_edit) { ?>
+                        <a href="#" data-toggle="modal" data-target="#myModal" onclick="call_section('6')" ><i class="glyphicon glyphicon-pencil pencil-back"></i></a>
+                    <?php } ?>
+                    <?php if (isset($show_verify) && $show_verify) { ?>
+                        <a href="#" data-toggle="modal" data-target="#verifyModal" ><!-- <i class="glyphicon glyphicon-check"></i> --><span class="badge badge-pill badge-success succuss_bord">Skill Verify</span></a>
+
+
+
+<?php } ?>
+                </h4>
+            </div>
+            <div class="detail-wrapper-body">
+                <div class=" mrg-bot-10">
+                    <?php
+                    if (count($user['developer_skills']) <= 0) {
+                        echo "Technologies are not selected yet.";
+                    } else
+                        foreach ($user['developer_skills'] as $key => $value) {
+                            ?>
+                            <span class="skill-tag"><?= $value->skill_name ?></span>                        
+<?php } ?>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12">
+    <div class="box">
+        <div class="detail-wrapper">
+            <div class="detail-wrapper-header">
+                <h4>Tools  
+                    <?php if ($show_edit) { ?>
+                        <a href="#" data-toggle="modal" data-target="#myModal" onclick="call_section('7')" ><i class="glyphicon glyphicon-pencil pencil-back"></i></a>
+                    <?php } ?>
+                    
+                </h4>
+            </div>
+            <div class="detail-wrapper-body">
+                <div class=" mrg-bot-10">
+                    <?php
+                    if (count($user['developer_tools']) <= 0) {
+                        echo "Tools are not selected yet.";
+                    } else
+                        foreach ($user['developer_tools'] as $key => $value) {
+                            ?>
+                            <span class="skill-tag"><?= $value->name ?></span>                        
+<?php } ?>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12">
+    <div class="box">
+        <div class="detail-wrapper">
+            <div class="detail-wrapper-header">
+                <h4>Languages  
+                    <?php if ($show_edit) { ?>
+                        <a href="#" data-toggle="modal" data-target="#myModal" onclick="call_section('3')" ><i class="glyphicon glyphicon-pencil pencil-back"></i></a>
+                    <?php } ?>                        
+                </h4>
+            </div>
+            <div class="detail-wrapper-body">
+                <div class=" mrg-bot-10">
+                    <?php
+                    if ($user[0]->language == "") {
+                        echo "Languages are not selected yet.";
+                    } else {
+                        $lang_array = explode(",", trim(@$user[0]->language, ','));
+                        foreach ($lang_array as $key => $value) {
+                            ?>
+                            <span class="skill-tag"><?= ucwords($value) ?></span>                        
+<?php }
+} ?>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-12">
+    <div class="box">
+        <div class="detail-wrapper">
+            <div class="detail-wrapper-header">
+                <h4>Portfolio 
+<?php if ($show_edit) { ?>    
+                        <a href="#" data-toggle="modal" data-target="#myModal" onclick="call_section('5')" ><i class="glyphicon glyphicon-pencil pencil-back"></i></a>
+                <?php } ?>
+                </h4>
+            </div>
+            <div class="detail-wrapper-body">
+                <?php
+                if (count($user['developer_portfolios']) <= 0)
+                    echo "No Record Found.";
+                else
+                    foreach ($user['developer_portfolios'] as $key => $value) {
+                        ?>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6">
+                                <div class="category-box portfolio p-box" data-aos="fade-up">
+                                    <div class="category-desc">
+                                        <div class="category-icon">
+                                            <a href="<?= $value->website_link ?>" title="">
+                                                <img src="<?= $value->image ?>" class="img-responsive portfolio-img">
+                                            </a>
+                                        </div>
+
+                                        <div class="category-detail category-desc-text">
+                                            <a href="<?= $value->website_link ?>" title=""><h4><?= $value->project_name ?></h4></a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="portfolio_des">
+                                    <h3><a href="<?= $value->website_link ?>"><i class="glyphicon glyphicon-record"></i> <?= $value->project_name ?></a></h3>
+
+                                    <p> <i class="fa fa-globe"></i><b>Web Site Link :</b> <?= $value->website_link ?></p>
+                                    <p> <i class="fa fa-chain"></i><b>GitHub Link :</b> <?= $value->github_link ?></p>
+                                    <p><i class="glyphicon glyphicon-info-sign"></i><?= substr($value->description, 0, 500) ?></p>
+                                </div>
+                            </div>
+                        </div>
+<?php } ?>
+                <!--                    <div class="row">
+                
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="category-box portfolio p-box" data-aos="fade-up">
+                                                <div class="category-desc">
+                                                    <div class="category-icon">
+                                                        <a href="https://yourdevsolutions.com" title="">
+                                                            <img src="assets/img/mokupyourdevscreen.jpg" class="img-responsive portfolio-img">
+                                                        </a>
+                                                    </div>
+                
+                                                    <div class="category-detail category-desc-text">
+                                                        <a href="https://yourdevsolutions.com" title=""><h4>Your Dev Solutions</h4></a>
+                
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="portfolio_des">
+                                                <h3><a href="https://yourdevsolutions.com"><i class="on glyphicon-record"></i> Your Dev solution</a></h3>
+                
+                                                <p> <i class="
+                                                       glyphicon glyphicon-time"></i>2017-2018</p>
+                                                <p> <i class="
+                                                       fa fa-black-tie"></i><b>Role :</b> Project Manager</p>
+                                                <p><i class="
+                                                      glyphicon glyphicon-info-sign"></i>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                                            </div>
+                
+                                        </div>
+                
+                
+                
+                                    </div>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-12">
+    <div class="box">
+        <div class="detail-wrapper">
+            <div class="detail-wrapper-header">
+                <h4>Employment 
+<?php if ($show_edit) { ?>
+                        <a href="#"  data-toggle="modal" data-target="#myModal" onclick="call_section('9')" ><i class="glyphicon glyphicon-pencil pencil-back"></i></a>
+                <?php } ?>
+                </h4>
+            </div>
+            <div class="detail-wrapper-body">
+                <?php
+                if (count($user['employments']) <= 0)
+                    echo "No Record Found";
+                else
+                    foreach ($user['employments'] as $key => $value) {
+                        ?>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="employment_detail">
+                                    <h3><i class="glyphicon glyphicon-briefcase"></i><b>Employer Name: </b> <span><?= $value->employer_name; ?></span></h3>
+                                    <p><i class="
+                                          fa fa-angle-double-right"></i><b>Designation :</b> <span><?= $value->designation; ?></span></p>
+                                    <p><i class="fa fa-angle-double-right"></i><b>Location :</b> <span> <?= $value->location; ?></span></p>
+                                    <p><i class="fa fa-angle-double-right"></i><b>Duration :</b> <?= $value->from_date . ' - ' . $value->to_date; ?></p>
+                                </div>
+                            </div>
+                        </div>
+<?php } ?>
+
+            </div>
+        </div>
+    </div>          
+</div>
+<div class="col-md-12">
+    <div class="box">
+        <div class="detail-wrapper">
+            <div class="detail-wrapper-header">
+                <h4>Education 
+<?php if ($show_edit) { ?>
+                        <a href="#" data-toggle="modal" data-target="#myModal" onclick="call_section('8')" ><i class="glyphicon glyphicon-pencil pencil-back"></i></a>
+                <?php } ?>
+                </h4>
+            </div>
+            <div class="detail-wrapper-body">
+                <?php
+                if (count($user['educations']) <= 0)
+                    echo "No record found";
+                else
+                    foreach ($user['educations'] as $key => $value) {
+                        ?>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="employment_detail">
+                                    <h3><i class="fa fa-building"></i><b>University Name: </b> <span><?= $value->university_name ?></span></h3>
+                                    <p><i class="fa fa-angle-double-right"></i><b>Degree :</b> <span><?= $value->degree ?></span></p>
+                                    <p><i class="fa fa-angle-double-right"></i><b>Location :</b> <span><?= $value->location ?></span></p>
+                                    <p><i class="fa fa-angle-double-right"></i><b>Duration :</b> <?= $value->from_date . " - " . $value->to_date ?></p>
+                                </div>
+                            </div>
+                        </div>
+<?php } ?>
+            </div>
+        </div>
+    </div>          
+</div>
+<div class="col-md-12">
+    <div class="box" id="9">
+        <div class="detail-wrapper">
+            <div class="detail-wrapper-header">
+                <h4>Q.A. </h4>
+            </div>
+            <div class="detail-wrapper-body">
+                <div class="col-md-12 col-sm-12">
+                    <div class="panel-group style-2 qapanel" id="accordion2" role="tablist" aria-multiselectable="true">
+                        <?php
+                        if (!is_array($que_ans))
+                            echo "No record found";
+                        else
+                            foreach ($que_ans as $key => $qa) {
+                                if($qa->type=='public') {
+                                
+                                ?>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="choose-us-<?= $qa->id ?>">
+                                        <h4 class="panel-title">
+                                            <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne<?= $qa->id ?>" aria-expanded="false" aria-controls="collapseOne<?= $qa->id ?>" class="collapsed question-font">
+    <?= $qa->question ?>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseOne<?= $qa->id ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="choose-us-<?= $qa->id ?>" aria-expanded="false" style="height: 0px;">
+                                        <div class="panel-body">
+                                            <p><?= ($qa->answer == '') ? "Developer has not reply yet!" : $qa->answer ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php } } ?>
+                    </div>
+                </div>
+
+<?php if (!$show_edit && $is_client) { ?>
+                  
+                    <div class="col-md-12">
+                        <form class="form-wrapper-one cf" method="post" action="<?= base_url('client/ask_question/' . $user[0]->id) ?>">
+                            <div class="maxl">
+<label class="radio inline"> 
+  <input type="radio" name="que_type" value="public" checked>
+  <span> Public </span> 
+</label>
+<label class="radio inline"> 
+  <input type="radio" name="que_type" value="private">
+  <span>Private </span> 
+</label>
+</div>
+                            <input type="text" placeholder="Ask Question..." required="" name="question">
+                            <button type="submit">Send</button>
+                        </form>
+                    </div>
+<?php } ?>
+            </div>
+        </div>
+    </div>
+</div>
+<?php if ($is_admin || (!$show_edit)) { ?>
+    <div class="col-md-12">
+        <form action="<?= ($is_admin) ? base_url('admin/rating/' . $user[0]->user_id) : base_url('client/rating/' . $user[0]->user_id) ?>" method="post">
+            <div class="box">
+                <div class="detail-wrapper">
+                    <div class="detail-wrapper-header">
+                        <h4>Rating </h4>
+                    </div>
+                    <div class="detail-wrapper-body">
+<?php if ($is_client || $is_admin) { ?>
+                            <div class="col-md-12">
+                                <div class="rating_comment">
+                                    <div class="rating_comment_body">
+                                        <div class="col-md-4 top_space">
+                                            <div class="row">
+                                                <div class="col-md-4 headingone"> Competency  </div>
+                                                <div class="col-md-5">
+                                                    <div class="rating">
+                                                        <input id="input_star_competency" name="star_competency" class="rating rating-loading" value="1" data-min="0" data-max="5" data-step="1" data-size="s" >                                                        
+                                                    </div>
+                                                    <!-- <span class="total-rating">4.0<small>/ 5</small></span> -->
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4 headingone"> Reliability   </div>
+                                                <div class="col-md-5">
+                                                    <div class="rating">
+                                                        <input id="input_star_reliability" name="star_reliability" class="rating rating-loading" value="1" data-min="0" data-max="5" data-step="1" data-size="s" >                                                        
+                                                    </div>
+                                                   <!--  <span class="total-rating">4.0<small>/ 5</small></span> -->
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4 headingone"> Honesty  </div>
+                                                <div class="col-md-5">
+                                                    <div class="rating">
+                                                        <input id="input_star_honesty" name="star_honesty" class="rating rating-loading" value="1" data-min="0" data-max="5" data-step="1" data-size="s" >                                                        
+                                                    </div>
+                                                    <!-- <span class="total-rating">4.0<small>/ 5</small></span> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 comment-text">
+
+                                            <div class="input-group input_txt">
+                                                <label>write a Review</label>
+                                                <p class="text-des">"Lorem Ipsum is simply dummy text of the printing and typesetting industry."  </p>
+                                                <textarea class="form-control" rows="3" name="comment"></textarea>
+                                                <!-- <input type="text" class="form-control" placeholder="Comment" name="comment"> -->
+
+                                            </div>
+                                            <div class="input-group-btn rviewbtn">
+                                                <button class="btn btn-primary" type="submit"> submit
+                                                    <i class="fa fa-arrow-right"></i>
+                                                </button>
+                                            </div>                                            
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+<?php } ?>
+                        <div class="">
+                            <div class="col-md-4">
+                                <div class="grey_box">
+                                    <h3>Average User Rating</h3>
+                                    <div class="starsone">
+                                        <?php
+                                        $rat = (int) $user[0]->review_rating;
+                                        $dark = 5 - $rat;
+                                        for ($i = 0; $i < $rat; $i++) {
+                                            ?>                                        
+                                            <i class="glyphicon glyphicon-star checkedone"></i>
+                                            <?php
+                                        }
+                                        for ($i = 0; $i < $dark; $i++) {
+                                            ?>                                        
+                                            <i class="glyphicon glyphicon-star-empty unchecked"></i>
+<?php } ?>
+                                        <span class="reviwcounttxt">(<?= $user[0]->review_count ?> Reviews)</span>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="col-md-6 review-breakdown">
+                                <div class="col-sm-12 col-xs-12" style="text-align:center"> 
+
+                                    <div class="row">
+                                        <div class="col-md-4 headingone"> Competency  </div>
+                                        <div class="col-md-5 profilerating">
+<?php echo rating($user[0]->avg_star_competency); ?>
+                                            <span class="total-rating"><?php echo round($user[0]->avg_star_competency); ?><small>/ 5</small></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-4 headingone"> Reliability   </div>
+                                        <div class="col-md-5 profilerating">
+<?php echo rating($user[0]->avg_star_reliability); ?>
+                                            <span class="total-rating"><?php echo round($user[0]->avg_star_reliability); ?><small>/ 5</small></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-4 headingone"> Honesty  </div>
+                                        <div class="col-md-5 profilerating">
+<?php echo rating($user[0]->avg_satr_honesty); ?>                    
+                                            <span class="total-rating"><?php echo round($user[0]->avg_satr_honesty); ?><small>/ 5</small></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                <?php if (isset($ratings) && is_array($ratings)) { ?>
+                            <div class="col-md-12">
+                                <div class="review-block clearfix">
+    <?php
+    foreach ($ratings as $key => $rating) {
+        $this->db->select('*');
+                $this->db->from('review_reply');
+                $this->db->where('review_id='.$rating->id);                
+                $query = $this->db->get();
+                $user_r=$this->User->get_user($rating->given_to_id);
+        ?>
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <?php if (!empty(@$rating->image)) { ?>
+                                                    <img src="<?= $rating->image ?>" class="img-rounded review-profile-image">
+        <?php } else { ?>
+                                                    <img src="<?= base_url() ?>assets/img/user.png" class="img-rounded review-profile-image">
+        <?php } ?>
+                                                <div class="review-block-name"><a href="#"><?= $rating->first_name . ' ' . $rating->last_name ?></a></div>
+                                                <!--<div class="review-block-name buyer-score text-rainbow"><a href="#">500/1000</a></div>-->
+                                                <div class="review-block-date"><?= date_format(date_create($rating->created), 'F d Y'); ?></div>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="review-block-rate">
+                                                            <div class="row">
+                                                                <div class="col-md-5"><span class="">  Competency  </span> </div>
+                                                                <div class="col-md-6 profilerating">
+        <?php echo rating($rating->star_competency); ?>
+                                                                    <span class="total-rating"><?php echo round($rating->star_competency); ?><small>/ 5</small></span>
+                                                                </div>
+                                                            </div>         
+                                                        </div>
+
+                                                        <div class="review-block-rate">
+                                                            <div class="row">
+                                                                <div class="col-md-5 "><span class="">  Reliability  </span> </div>
+                                                                <div class="col-md-6 profilerating">
+        <?php echo rating($rating->star_reliability); ?>
+                                                                    <span class="total-rating"><?php echo round($rating->star_reliability); ?><small>/ 5</small></span>
+                                                                </div>
+                                                            </div>         
+                                                        </div>
+
+                                                        <div class="review-block-rate">
+                                                            <div class="row">
+                                                                <div class="col-md-5"><span class="">  Honesty  </span> </div>
+                                                                <div class="col-md-6 profilerating">
+        <?php echo rating($rating->satr_honesty); ?>                            
+                                                                    <span class="total-rating"><small><?php echo round($rating->satr_honesty); ?>/ 5</small></span>
+                                                                </div>
+                                                            </div>         
+                                                        </div>
+                                                    </div>
+                                                  <!--  <div class="col-sm-3">  <p class="transaction-value"> Value : $230</p></div>-->
+                                                    <div class="col-sm-2"> </div>
+                                                </div>
+                                                <hr/>
+                                                <!--<div class="review-block-title">this was nice in buy</div>-->
+                                                <div class="review-block-description"><?= $rating->comment ?></div>
+                                                <?php if ($query->num_rows() > 0){?>
+                                                <button type="button" class="comment_replyfront collapsed" data-toggle="collapse" data-target="#demo3" aria-expanded="false"> <i class="fa fa-reply"></i> Reply</button>
+                                                <?php } ?>
+                    </div>
+                                            </div>
+                                            <?php 
+                                            
+                if ($query->num_rows() > 0){
+            $review_replys = $query->result();
+            foreach ($review_replys as $key => $value) {                
+                ?>
+                                                <div id="demo3" class="collapse" aria-expanded="false" style="height: 0px;">
+                        <div class="single-comment left_coment_pnl">
+                    <div class="img-holder">
+                        <img src="<?php if($user_r->image!='') 
+                            echo $user_r->image; 
+                        else  echo 'https://yourdevsolutions.com/your-dev/assets/img/user.png';?>" class="img-responsive" alt="">
+                    </div>
+                    <div class="text-holder">
+
+                        <div class="top">
+                            <div class="name pull-left">
+                                <h4><?php echo $user_r->first_name.' '.$user_r->last_name;?></h4>
+                            </div>
+
+                        </div>
+
+                        <div class="text">
+                            <p><?php echo $value->comment;?></p>
+                        </div>
+                        <span class="small"><?php echo date_format(date_create($value->created),"d M y H:i");?></span>
+
+                    </div>
+                </div>
+                                        </div>
+                <?php }}?>     
+          
+                            <?php } ?>                                        
+                                </div>
+                            </div>
+<?php } ?>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+<?php } ?>
+</section>
+<div class="clearfix"></div>
+
+<script type="text/javascript">
+
+
+
+</script>
+
+<div class="bs-example">
+<!-- Button HTML (to Trigger Modal) -->
+
+<!-- Modal HTML -->
+<div id="videoModel" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Wordpress Video</h4>
+            </div>
+            <div class="modal-body video-model">
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <video width="200" height="200" controls="">
+                            <source src="../../assets/video/movie.mp4" type="video/mp4">
+
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="video-list">
+                            <li><video width="100" height="100 controls="">
+                                    <source src="../../assets/video/movie.mp4" type="video/mp4">
+
+                                    Your browser does not support the video tag.
+                                </video> wordpress</li>
+                            <li><video width="100" height="100 controls="">
+                                    <source src="../../assets/video/movie.mp4" type="video/mp4">
+
+                                    Your browser does not support the video tag.
+                                </video>wordpress</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+<div class="modal fade" id="myModal" role="dialog">
+<div class="modal-dialog" style="width: 80% !important;max-width: 100%;">
+
+    <!-- Modal content-->
+    <div class="modal-content stylemodel">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>          
+        </div>
+        <div id="msg"></div>
+        <form  method="POST" enctype="multipart/form-data" id='edit_form'>
+            <div class="modal-body" id="modal-body"></div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button"  id="edit_submit" class="btn theme-btn" style="width: 9%!important;">Submit</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+</div>
+<script>
+var section_number = 0;
+function call_section(section_num) {
+    $("#modal-body").html("<img src='<?= base_url() ?>assets/img/load-icon.gif' style='display: block;margin-left: auto;margin-right: auto'>");
+    $("#msg").html('');
+    section_number = section_num;
+    $.ajax({
+        url: "<?= base_url('developer/edit_profile/' . $user[0]->user_id . '/') ?>" + section_number,
+        success: function (result) {
+            $("#modal-body").html(result);
+        }});
+}
+</script>
+<script>
+//submit edit form
+//$(document).ready(function(){
+$("#edit_submit").click(function (event) {
+    /* $("#edit_submit").html("<img src='<?= base_url() ?>assets/img/load-icon.gif' style='display: block;margin-left: auto;margin-right: auto;width: 50%;'>");*/
+    $("#edit_submit").html("loading...");
+
+//to notify user the file is being uploaded
+    files = event.target.files;
+// get the selected files
+    var data = new FormData($('#edit_form')[0]);
+// Form Data check the above bullet for what it is  
+    var error = 0;
+// Flag to notify in case of error and abort the upload
+
+// File data is presented as an array. In this case we can just jump to the index file using files[0] but this array traversal is recommended
+    var files = $("input[type='file']");
+    for (var i = 0; i < files.length; i++) {
+
+        var file = files[i];
+        if (!file.type.match('image.*')) {
+// Check for File type. the 'type' property is a string, it facilitates usage if match() function to do the matching                 
+
+        } else if (file.size > 1048576) {
+// File size is provided in bytes                
+            alert("file is too large");
+            error = 1;
+        } else {
+//        alert(files[i].name);
+// If all goes well, append the up-loadable file to FormData object
+            data.append('image', file, file.name);
+// Comparing it to a standard form submission the 'image' will be name of input
+        }
+    }
+
+    if (error == 0) {
+//        $("#edit_submit").attr("disabled", "disabled");
+        $.ajax({
+            url: "<?= base_url('developer/edit_profile/' . $user[0]->user_id . '/') ?>" + section_number,
+            type: 'post',
+            enctype: 'multipart/form-data',
+            dataType: 'json',
+//            data: $("#edit_form").serialize(),
+            data: data,
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false,
+
+            success: function (response) {
+
+//                alert(response.status);
+                if (response.status == 'success') {
+//                        alert('asddsf');
+//                        $('#msg').html('<div class="alert alert-success alert-dismissible fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Success!</strong> ' + response.msg + '</div>');
+//                        $('.embedModal').modal('hide');                        
+//                        $("#edit_submit").html("Submit");
+//                        $("#edit_submit").attr("disabled", false);
+                    window.location.href = response.url;                        
+                    window.location.href = response.url;
+                } else {
+                    $('#msg').html('<div class="alert alert-danger alert-dismissible fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Error!</strong> ' + response.msg + '</div>');
+                    $("#edit_submit").html("Submit");
+                    $("#edit_submit").attr("disabled", false);
+//                    if (response.url !== '')
+//                        window.location.href = response.url;
+                    return false;
+                }
+                $("#edit_submit").attr("disabled", false);
+            }
+        });
+    }
+
+});
+//});
+</script>
+<script type="text/javascript">
+//    $(function () {
+//        $('.show-rating').html('<span class="stars">' + parseFloat($('input[name=amount]').val()) + '</span>');
+//        $('span.stars').stars();
+//    });
+//
+//    $.fn.stars = function () {
+//        return $(this).each(function () {
+//            $(this).html($('<span />').width(Math.max(0, (Math.min(5, parseFloat($(this).html())))) * 16));
+//        });
+//    }
+</script>
+<script>
+$('article').readmore({
+    speed: 100,
+    collapsedHeight: 200,
+    heightMargin: 16,
+    moreLink: '<a href="#">Read More</a>',
+    lessLink: '<a href="#">Close</a>',
+    embedCSS: true,
+    blockCSS: 'display: block; width: 100%;',
+    startOpen: false,
+
+// callbacks
+    blockProcessed: function () {},
+    beforeToggle: function () {},
+    afterToggle: function () {}
+});
+
+$('.change_it').on('click', function () {
+    var src = $(this).attr('data-item-url');
+    var type = $(this).attr('data-item-type');
+    $("#change_it").html('');
+    $("#change_it").html('<video controls width="100" id="main_video"><source src="' + src + '" type="' + type + '">Your browser does not support the video tag.</video>');
+//    video=("#main_video");
+//    video.pause();
+//    $("#main-video").attr('src',$(this).attr('data-item-url'));
+//    $("#main-video").attr('type',$(this).attr('data-item-type'));
+//video.currentTime = 0;
+//video.load();
+});
+</script>
+<script>
+$(function () {
+    $('.askbtn').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 3000);
+                return false;
+            }
+        }
+    });
+});
+function full_time() {
+    $("#job_type_headig").html('<i class="ti-clock-pin padd-r-10"></i>Full Titme');
+    $("#rate").html('<i class="ti-credit-card padd-r-10"></i>Hourly : <?php echo $user[0]->full_time_amount ?>$/hr');
+    $("#end_date_row").show();
+    $("#start_date_row").hide();
+    $("#hours_row").hide();
+    $("#amount_row").hide();
+    $("#job_type_val").val('full time');
+}
+function part_time() {
+    $("#job_type_headig").html('<i class="ti-clock-pin padd-r-10"></i>Part Titme');
+    $("#end_date_row").show();
+    $("#start_date_row").hide();
+    $("#hours_row").hide();
+    $("#amount_row").hide();
+    $("#rate").html('<i class="ti-credit-card padd-r-10"></i>Hourly : <?php echo $user[0]->part_time_amount ?>$/hr');
+    $("#job_type_val").val('part time');
+}
+function contract() {
+    $("#job_type_val").val('contract');
+    $("#start_date_row").hide();
+    $("#end_date_row").hide();
+    $("#hours_row").show();
+    $("#amount_row").show();
+    $("#job_type_headig").html('<i class="ti-clock-pin padd-r-10"></i>Contract');
+    $("#rate").html('<i class="ti-credit-card padd-r-10"></i>Contract : <?php echo $user[0]->contract_amount ?>$');
+}
+
+function form_submit() {
+    var job_type = $("#job_type_val").val();
+    var submit_status = false;
+    if (job_type.toLowerCase() === 'full time') {
+        if ($("#end_date").val() !== '')
+            $("#hire_form").submit();
+        else
+            swal("Error!", "Please Select End Date.", "error");
+    } else if (job_type.toLowerCase() === 'part time') {
+        if ($("#end_date").val() !== '')
+            $("#hire_form").submit();
+        else
+            swal("Error!", "Please Select End Date.", "error");
+    } else if (job_type.toLowerCase() === 'contract') {
+        if ($("#contact_hours").val() !== '' && $("#contact_amount").val() !== '')
+            $("#hire_form").submit();
+        else
+            swal("Error!", "Please Select Contract Hours.", "error");
+    }
+
+}
+
+$("#contact_hours").on('change', function () {
+    var hours = parseInt($(this).val());
+    var amount = hours *<?= $user[0]->contract_amount; ?>;
+    $("#contract_amount").val(amount);
+});
+
+$('#start_date').datepicker({}).on('changeDate', function (selected) {
+    startDate = new Date(selected.date.valueOf());
+    startDate.setDate(startDate.getDate(new Date(selected.date.valueOf())));
+    $('#end_date').datepicker('setStartDate', startDate);
+});
+
+
+$('#end_date').datepicker({}).on('changeDate', function (selected) {
+    FromEndDate = new Date(selected.date.valueOf());
+    FromEndDate.setDate(FromEndDate.getDate(new Date(selected.date.valueOf())));
+    $('#start_date').datepicker('setEndDate', FromEndDate);
+});
+
+$(document).ready(function () {
+<?php
+if (strcasecmp($job_type, 'full time') == 0)
+echo "full_time();";
+if (strcasecmp($job_type, 'part time') == 0)
+echo "part_time();";
+if (strcasecmp($job_type, 'contract') == 0)
+echo "contract();";
+?>
+
+
+
+});
+
+
+</script> 
+
+
+<!--keep this section at last-->
+<script src="https://yourdevsolutions.com/your-dev/admin_assets/js/vendor/jquery-2.1.4.min.js"></script>
+<!-- optionally if you need to use a theme, then include the theme file as mentioned below -->
+<link href="<?= base_url() ?>assets/css/star-rating.min.css" media="all" rel="stylesheet" type="text/css" />
+<script src="<?= base_url() ?>assets/js/star-rating.min.js" type="text/javascript"></script>
+<script>
+$("#input_star_competency").rating({captionElement: false, hoverChangeCaption: false,
+// whether the clear button is to be displayed
+    showClear: false,
+// whether the rating caption is to be displayed
+    showCaption: false,
+});
+
+$("#input_star_reliability").rating({captionElement: false, hoverChangeCaption: false,
+// whether the clear button is to be displayed
+    showClear: false,
+// whether the rating caption is to be displayed
+    showCaption: false,
+});
+
+$("#input_star_honesty").rating({captionElement: false, hoverChangeCaption: false,
+// whether the clear button is to be displayed
+    showClear: false,
+// whether the rating caption is to be displayed
+    showCaption: false,
+});
+</script>
+<!--keep this section at last-->
